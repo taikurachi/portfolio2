@@ -1,3 +1,11 @@
-export default function HeadingLG({ children }) {
-  return <h2 className="text-6xl font-bold mb-4">{children}</h2>;
+export default function HeadingLG({ children, className }) {
+  return (
+    <h2
+      className={`text-4xl sm:text-6xl font-bold ${
+        className ? className : "mb-8"
+      }`}
+    >
+      {children}
+    </h2>
+  );
 }

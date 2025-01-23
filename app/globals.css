@@ -48,3 +48,32 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+}
+
+ul,
+ol,
+a {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 767px) {
+  p {
+    font-size: 1rem;
+  }
+
+  ul,
+  ol,
+  a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  p {
+    margin-bottom: 1.25rem;
+  }
+}

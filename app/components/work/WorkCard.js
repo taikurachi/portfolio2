@@ -1,7 +1,14 @@
 import Link from "next/link";
-export default function WorkCard({ title, tags, children, color, className }) {
+export default function WorkCard({
+  title,
+  tags,
+  children,
+  color,
+  className,
+  href,
+}) {
   return (
-    <Link href="/intbot">
+    <Link href={href} className={className}>
       <div className={`bg-[#636363] rounded-lg p-4 flex flex-col gap-6`}>
         <div className={`rounded-lg h-[300px] relative ${color} ${className}`}>
           {children}

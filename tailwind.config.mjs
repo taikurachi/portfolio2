@@ -12,6 +12,7 @@ export default {
           purple: "#EEE0FF",
           blue: "#C2EAF3",
           pink: "#f15bb5",
+          salmon: "#FFC0BA",
         },
       },
     },

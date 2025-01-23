@@ -1,7 +1,15 @@
-export default function Video({ altText, src, className }) {
+export default function Video({ altText, src, className, videoClassName }) {
   return (
-    <div className={`${className} rounded-lg`}>
-      <video muted preload="true" autoPlay loop playsInline alt={altText}>
+    <div className={`${className} rounded-lg bg-transparent`}>
+      <video
+        muted
+        preload="true"
+        className={videoClassName}
+        autoPlay
+        loop
+        playsInline
+        alt={altText}
+      >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

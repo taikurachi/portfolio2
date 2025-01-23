@@ -5,12 +5,12 @@ import Video from "../components/utils/Video";
 import Link from "next/link";
 import Image from "next/image";
 import AssetDisplayColumn from "../components/utils/AssetDisplayColumn";
-import WorkTags from "../components/utils/WorkTags";
 import { useState } from "react";
 import HeadingMain from "../components/utils/headings/HeadingMain";
 import HeadingLG from "../components/utils/headings/HeadingLG";
 import HeadingMD from "../components/utils/headings/HeadingMD";
 import HeadingSM from "../components/utils/headings/HeadingSM";
+import AccentText from "../components/utils/AccentText";
 export default function IntbotPage() {
   const [version, setVersion] = useState(0);
 
@@ -61,39 +61,64 @@ export default function IntbotPage() {
             View site
           </Link>
         </div>
-        <WorkTags
-          impact={[
-            "Increased user traffic by over 30%.",
-            "Built typographic and layout system to establish brand consistency and professionalism.",
-            "Created reusable React + TypeScript components for scalability and efficiency. ",
-          ]}
-          role={["UX/UI Designer", "Front-End Engineer"]}
-          tools={[
-            "React",
-            "TypeScript",
-            "TailwindCSS",
-            "Figma",
-            "Motion (Animations)",
-          ]}
-          timeline="Dec. 2024 - Jan. 2025"
-          className=""
-        />
+        <div className={`flex gap-8 md:flex-row flex-col`}>
+          <div>
+            <HeadingLG className="mb-4">Impact</HeadingLG>
+            <ul className="list-disc ml-4">
+              <li>
+                Increased user traffic by{" "}
+                <AccentText color="#EEE0FF">30%</AccentText>
+              </li>
+              <li>
+                Built <AccentText color="#EEE0FF">typographic</AccentText> and{" "}
+                <AccentText color="#EEE0FF">layout</AccentText> system to
+                establish brand consistency and professionalism.
+              </li>
+              <li>
+                Created reusable{" "}
+                <AccentText color="#EEE0FF">React + TypeScript</AccentText>{" "}
+                components for scalability and efficiency.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <HeadingLG className="mb-4">Role</HeadingLG>
+            <ul className="list-disc ml-4">
+              <li>UX/UI Design</li>
+              <li>Front-End Engineer</li>
+            </ul>
+          </div>
+          <div>
+            <HeadingLG className="mb-4">Tools</HeadingLG>
+            <ul className="list-disc ml-4">
+              <li>ReactJS</li>
+              <li>TypeScript</li>
+              <li>TailwindCSS</li>
+              <li>Figma</li>
+              <li>Motion (Animations)</li>
+            </ul>
+          </div>
+          <div>
+            <HeadingLG className="mb-4">Timeline</HeadingLG>
+            <p>Dec. 2024 - Jan. 2025</p>
+          </div>
+        </div>
         <div>
           <HeadingLG>Challenges</HeadingLG>
           <div className="flex flex-col gap-10">
             <div>
               <HeadingMD>Time constraints</HeadingMD>
-              <p className="mb-4">
+              <p>
                 The time constraint was my biggest challenge. I was tasked to
                 design and develop a brand new website within 2 weeks as IntBot
                 wanted to demo their product at 2025 CES.
               </p>
-              <p className="mb-4">
+              <p>
                 I didn&apos;t have time to conduct carefully conduct the design
-                process, such as user research as my Co-founder wanted to see
-                some high-fidelity prototypes as soon as possible.
+                process, as my Co-founder wanted to see high-fidelity prototypes
+                as soon as possible.
               </p>
-              <p className="mb-4">
+              <p>
                 I couldn&apos;t fully validate my design choices through
                 usability testing. I couldn&apos;t make too many iterations
                 based on user feedback.
@@ -101,22 +126,21 @@ export default function IntbotPage() {
             </div>
             <div>
               <HeadingMD>No firm design system</HeadingMD>
-              <p className="mb-4">
-                I didn&apos;t have a foundational design system to work with, so
-                I had to first find a commercial free font that would suit the
-                IntBot brand.
+              <p>
+                I didn&apos;t have a foundational design system to work with. I
+                was tasked to build typographic and brand guidelines from
+                scratch.
               </p>
-              <p className="mb-4">
-                I looked for geometric fonts to symbolize Intbot&apos;s
-                modernistic, innovative brand appeal.
+              <p>
+                I decided upon two geometric fonts,{" "}
+                <span className="font-evolventa underline">Evolventa-bold</span>{" "}
+                for headings and{" "}
+                <span className="font-evolventa underline">Mundial</span> for
+                paragraph text, to symbolize Intbot&apos;s modernistic,
+                innovative brand appeal.
               </p>
-              <p className="mb-8">
-                I stumbled upon these two fonts. I used Evolventa-bold for
-                headings and Mundial for regular paragraph text. I made these
-                typographic systems for future improvements to the website and
-                other aspects of the IntBot brand.
-              </p>
-              <div className="flex sm:flex-row flex-col gap-4">
+              <HeadingSM>Typography</HeadingSM>
+              <div className="flex sm:flex-row flex-col gap-4 mb-8">
                 <div className="w-full sm:w-[50%] bg-white p-4 text-black font-evolventa">
                   <div className="flex gap-4 items-center mb-5">
                     <div className="bg-gray-200 w-fit p-2 rounded-sm">
@@ -148,14 +172,15 @@ export default function IntbotPage() {
                   </div>
                   <p className="text-xl mb-5">Paragraph-xl</p>
                   <p className="text-lg mb-5">Paragraph-lg</p>
-                  <p className="text-md mb-5">Paragraph-md</p>
+                  <p className="text-[16px] mb-5">Paragraph-md</p>
                   <p className="text-sm mb-5">Paragraph-sm</p>
                 </div>
               </div>
+              <HeadingSM>Colors</HeadingSM>
             </div>
             <div>
-              <HeadingMD>Moving blobs</HeadingMD>
-              <p className="mb-4">
+              <HeadingMD className="mb-4">Moving blobs</HeadingMD>
+              <p>
                 Creating a fluid blob animation for the hero section was an
                 iterative process.
               </p>
@@ -176,29 +201,30 @@ export default function IntbotPage() {
                 </div>
                 <div className="relative">
                   <Video
+                    src={dynamicVideoLink[0]}
+                    altText={`placeholder animation`}
+                  />
+                  <Video
                     key={version}
                     className="absolute top-0 left-0"
                     src={dynamicVideoLink[version]}
                     altText={`blob animation ${version}`}
-                  />
-                  <Video
-                    src={dynamicVideoLink[0]}
-                    altText={`placeholder animation`}
                   />
                 </div>
               </div>
             </div>
             <div>
               <HeadingMD>Changing blob colors</HeadingMD>
-              <p className="mb-4">
-                The color changing animation was hard to animate due to CSS’s
-                interpolation properties. CSS handles animation of styling
-                properties differently for various properties. I was trying to
-                animate the backgorund colors of radial-gradient for the blobs
-                but CSS couldn’t GG them properly as would a backgorund-color
-                transition.
+              <p>
+                The color-changing animation was challenging to implement due to
+                CSS&apos;s interpolation properties. CSS handles the animation
+                of various styling properties differently, which created
+                difficulties. Specifically, I was trying to animate the
+                background colors of a radial-gradient for the blobs, but CSS
+                couldn&apos;t interpolate them properly, unlike how it handles a
+                background-color transition.
               </p>
-              <p className="mb-8">
+              <p>
                 As a solution, I decided to rotate the hue of the layer instead
                 of changing the blob colors to give an illusion that the blobs
                 are changing colors.
@@ -222,9 +248,9 @@ export default function IntbotPage() {
             </div>
           </div>
         </div>
-        <div className="">
+        <div>
           <HeadingLG>Before & After</HeadingLG>
-          <p className="mb-8">
+          <p>
             Here is a before and after of the IntBot website after my
             contributions.
           </p>
@@ -232,7 +258,7 @@ export default function IntbotPage() {
             <div className="flex-1">
               <HeadingSM>Before</HeadingSM>
               <Image
-                src="/intbot/intbot-5.jpg"
+                src="/intbot/intbot-5.webp"
                 alt="Intbot before image"
                 layout="responsive"
                 width={100}

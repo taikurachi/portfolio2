@@ -15,7 +15,10 @@ export default function SongsyncPage() {
           <HeadingMain>
             Syncing upcoming concerts with recently played songs.
           </HeadingMain>
-          <p className="mb-0">Using Spotify OAuth.</p>
+          <p className="mb-0">
+            Figuring out Spotify OAuth, NextJS proxy routes, and displaying an
+            aesthetic UI.
+          </p>
           <div className="flex flex-row gap-4">
             <Video src="/songsync/songsync.webm" altText="songsync demo" />
           </div>

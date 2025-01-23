@@ -13,6 +13,7 @@ export default {
           blue: "#C2EAF3",
           pink: "#f15bb5",
           salmon: "#FFC0BA",
+          green: "#B3E8CA",
         },
       },
     },

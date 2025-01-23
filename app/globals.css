@@ -49,6 +49,14 @@ body {
   color: var(--text-color);
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  body.menu-open {
+    overflow: auto;
+  }
+}
 p {
   margin-bottom: 2rem;
   font-size: 1.25rem;

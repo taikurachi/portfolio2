@@ -1,23 +1,22 @@
 import Logo from "./Logo";
-
+import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="p-10 border-t">
-      <div className="flex flex-col md:flex-row gap-5 justify-between max-w-[1120px] mx-auto">
+      <div className="flex flex-col md:flex-row items-start md:items-end gap-10 sm:gap-20 max-w-[1120px] mx-auto">
         <div>
           <Logo width={100} />
-          <p className="mt-4">Designed & built by Taisei Kurachi</p>
+          <p className="mt-4 mb-0">Designed & built by Taisei Kurachi</p>
         </div>
         <div>
           <h4 className="font-semibold text-2xl mb-2 md:mb-4">Contact</h4>
-          <p>LinkedIn</p>
-          <p>tk2958@nyu.edu</p>
-        </div>
-        <div>
-          <h4 className="font-semibold text-2xl mb-2md:mb-4">
-            Currently listening to
-          </h4>
-          <div>Sienna by The Mariahs</div>
+          <div className="flex sm:flex-row flex-col gap-2 sm:gap-10">
+            <Link href="https://www.linkedin.com/in/taiseikurachi/">
+              LinkedIn
+            </Link>
+            <Link href="mailto:tk2958@nyu.edu">tk2958@nyu.edu</Link>
+            <Link href="https://github.com/taikurachi">GitHub</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -41,16 +41,23 @@ export default function Work() {
         <Video
           altText="IntBot website showcase video"
           src="/intbot/intbot-1.webm"
-          className="absolute right-0 bottom-0 md:w-[90%] top-auto w-[90%] sm:top-[60px] lg:top-auto lg:w-[80%]"
+          className="absolute border-gray-300 border-[4px] right-0 bottom-0 translate-y-4 translate-x-4 md:w-[90%] top-auto w-[90%] sm:top-[60px] lg:top-auto lg:w-[80%]"
         />
       </WorkCard>
 
       <WorkCard
-        href="/intbot"
-        color="bg-primary-blue"
+        className="overflow-hidden"
+        href="/songsync"
+        color="bg-primary-green"
         title="Syncing upcoming concerts with recently played songs."
-        tags={["Front-End Engineering", "UX/UI Design"]}
-      />
+        tags={["Front-End Engineering", "UI Design"]}
+      >
+        <Video
+          altText="Songsync showcase video"
+          src="/songsync/songsync.webm"
+          className="absolute right-0 bottom-0 translate-y-4 translate-x-4 md:w-[90%] w-[90%] sm:top-[60px] lg:top-auto lg:w-[80%]"
+        />
+      </WorkCard>
     </div>
   );
 }

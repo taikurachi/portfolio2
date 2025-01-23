@@ -93,8 +93,9 @@ export default function BeaconPage() {
           <p className="text-xl font-semibold">
             How can we reframe the experience of cancer to make it more{" "}
             <AccentText color="#FFC0BA">hopeful</AccentText> and{" "}
-            <AccentText color="#FFC0BA">positive</AccentText>, without losing
-            sight of the reality <AccentText color="#FFC0BA">?</AccentText>
+            <AccentText color="#FFC0BA">positive</AccentText> to decrease stress
+            for everyone involved
+            <AccentText color="#FFC0BA">?</AccentText>
           </p>
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2">
             <div className="sm:border-r w-full border-b p-0 sm:pr-10 pb-10">
@@ -1370,7 +1371,7 @@ export default function BeaconPage() {
               <HeadingMD>Future Steps</HeadingMD>
               <div>
                 <HeadingSM>Adding Volunteer Option</HeadingSM>
-                <p>
+                <p className="mb-0">
                   My app relies on existing data to deliver relevant content to
                   each user. Adding an option for users to volunteer success
                   stories or other useful information could help keep the
@@ -1379,7 +1380,7 @@ export default function BeaconPage() {
                   base to be effective.
                 </p>
               </div>
-              <div>
+              {/* <div>
                 <HeadingSM>Simulating Design Handoffs</HeadingSM>
                 <p>
                   In a real-world environment, there would be multiple teams
@@ -1389,7 +1390,7 @@ export default function BeaconPage() {
                   my design system with development libraries such as
                   TailwindCSS or Material-UI.
                 </p>
-              </div>
+              </div> */}
             </div>
             <div>
               <HeadingMD>Reflections & Notes</HeadingMD>

@@ -151,7 +151,7 @@ export default function IntbotPage() {
                         alt="fontface icon"
                       />
                     </div>
-                    <p className="text-xl">Evolventa</p>
+                    <p className="text-xl mb-0">Evolventa</p>
                   </div>
                   <p className="text-6xl mb-5">Heading-xl</p>
                   <p className="text-5xl mb-5">Heading-lg</p>
@@ -168,7 +168,7 @@ export default function IntbotPage() {
                         alt="fontface icon"
                       />
                     </div>
-                    <p className="font-mundial text-xl">Mundial</p>
+                    <p className="text-xl mb-0">Mundial</p>
                   </div>
                   <p className="text-xl mb-5">Paragraph-xl</p>
                   <p className="text-lg mb-5">Paragraph-lg</p>

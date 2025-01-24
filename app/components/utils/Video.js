@@ -3,7 +3,7 @@ export default function Video({ altText, src, className, videoClassName }) {
     <div className={`${className} rounded-lg bg-transparent`}>
       <video
         muted
-        preload="true"
+        preload="auto"
         className={videoClassName}
         autoPlay
         loop

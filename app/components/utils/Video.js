@@ -10,8 +10,7 @@ export default function Video({ altText, src, className, videoClassName }) {
         playsInline
         alt={altText}
       >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
+        <source src={src} type="video/webm" />
       </video>
     </div>
   );

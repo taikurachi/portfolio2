@@ -12,7 +12,7 @@ export default function BeaconPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-6 sm:mt-20 flex flex-col gap-20 pb-20 sm:pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-20 sm:mt-20 flex flex-col gap-20 pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>Cancer Support App Focused on Positivity</HeadingMain>
           <p className="mb-0">

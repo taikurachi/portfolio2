@@ -43,7 +43,7 @@ export default function BeaconPage() {
             View prototype
           </Link>
         </div>
-        <div className={`flex gap-8 md:flex-row flex-col`}>
+        <div className={`flex justify-between gap-6 lg:flex-row flex-col`}>
           <div>
             <HeadingLG className="mb-4">Impact</HeadingLG>
             <ul className="list-disc ml-4">
@@ -193,13 +193,76 @@ export default function BeaconPage() {
             lower levels of anxiety and depression compared to those who feel
             uncertain about their care.
           </p>
-          <p className="mb-0">
+          <p className="">
             <AccentText className="text-3xl font-bold" color="#FFC0BA">
               20-30%
             </AccentText>{" "}
             lower levels of anxiety and depression when informed about their
             cancer.
           </p>
+          <div className="flex md:flex-row flex-col-reverse gap-10 mt-20 items-center">
+            <Video
+              className="md:w-1/2 lg:w-1/4"
+              videoClassName="rounded-[30px]"
+              src="/beacon/beacon-onboarding.webm"
+              altText="beacon onboarding demo"
+            />
+            <div>
+              <HeadingMD className="text-primary-salmon mb-4">
+                Quick + Supportive Onboarding
+              </HeadingMD>
+              <p className="font-semibold mb-4">
+                No more headaches when trying to access the most vital
+                information.
+              </p>
+              <p className="font-medium">
+                Beacon allows you to sign up within seconds so you can access
+                your personalized information as soon as possible.
+              </p>
+            </div>
+          </div>
+          <div className="flex md:flex-row flex-col-reverse gap-10 mt-20 items-center">
+            <Video
+              className="md:w-1/2 lg:w-1/4"
+              videoClassName="rounded-[30px]"
+              src="/beacon/beacon-second.webm"
+              altText="beacon onboarding demo"
+            />
+            <div>
+              <HeadingMD className="text-primary-salmon mb-4">
+                Easy Lookup + Inclusive Design
+              </HeadingMD>
+              <p className="font-semibold mb-4">
+                Every form of cancer is built in so users don&apos;t feel
+                isolated about their diagnosis.
+              </p>
+              <p className="font-medium">
+                Beacon makes sure every patient/person is seen. It delivers
+                personalized content based on info inputted during onboarding.
+              </p>
+            </div>
+          </div>
+          <div className="flex md:flex-row flex-col-reverse gap-10 mt-20 items-center">
+            <Video
+              className="md:w-1/2 lg:w-1/4"
+              videoClassName="rounded-[30px]"
+              src="/beacon/beacon-home.webm"
+              altText="beacon onboarding demo"
+            />
+            <div>
+              <HeadingMD className="text-primary-salmon mb-4">
+                Personalized Support Resources
+              </HeadingMD>
+              <p className="font-semibold mb-4">
+                No more ambiguity or having to look for the necessary
+                information.
+              </p>
+              <p className="font-medium">
+                Beacon makes sure every patient/person is seen. It delivers
+                personalized content based on info inputted during onboarding.
+              </p>
+            </div>
+          </div>
         </div>
         <div>
           <HeadingLG>Process</HeadingLG>
@@ -212,8 +275,8 @@ export default function BeaconPage() {
                 <HeadingMD>Research</HeadingMD>
                 <ul>
                   <li>Competitive Analysis</li>
+                  <li>Identifying App Problems</li>
                   <li>Interviews & Affinity Mapping</li>
-                  <li>Identifying Current Problems</li>
                 </ul>
               </div>
             </div>
@@ -328,26 +391,7 @@ export default function BeaconPage() {
               </p>
             </div>
             <div>
-              <HeadingMD>Interviews & Affinity Mapping</HeadingMD>
-              <p>
-                Before I started designing, I wanted to better understand how
-                patients currently deal with cancer diagnosis and the problems
-                they encounter with current support apps. I interviewed my
-                friend and looked on reddit threads for cancer patients who
-                expressed any pain points. I created an affinity map to organize{" "}
-                <AccentText color="#FFC0BA">
-                  paint points, feature ideas, and user needs.
-                </AccentText>
-              </p>
-              <Image
-                src="/beacon/affinity-map.webp"
-                alt="affinity map image"
-                width={800}
-                height={300}
-              />
-            </div>
-            <div>
-              <HeadingMD>Identifying Current Problems</HeadingMD>
+              <HeadingMD>Identifying App Problems</HeadingMD>
               <div className="flex flex-col gap-20">
                 <div>
                   <HeadingSM>Doom Statistics</HeadingSM>
@@ -455,6 +499,25 @@ export default function BeaconPage() {
                     alt="affinity map image"
                     width={600}
                     height={100}
+                  />
+                </div>
+                <div>
+                  <HeadingMD>Interviews & Affinity Mapping</HeadingMD>
+                  <p>
+                    Before designing, I researched how patients handle cancer
+                    diagnoses and the challenges they face with support apps. I
+                    interviewed my friend and analyzed data from Reddit threads
+                    to identify{" "}
+                    <AccentText color="#FFC0BA">
+                      paint points, feature ideas, and user needs,
+                    </AccentText>{" "}
+                    which I organized into an affinity map.
+                  </p>
+                  <Image
+                    src="/beacon/affinity-map.webp"
+                    alt="affinity map image"
+                    width={800}
+                    height={300}
                   />
                 </div>
                 <div>

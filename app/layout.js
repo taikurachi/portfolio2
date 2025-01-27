@@ -34,6 +34,11 @@ export default function RootLayout({ children }) {
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="708d989a-acf2-4dce-bff3-1e1c53f201be"
+        ></script>
       </Head>
       <body className={`antialiased ${outfit.className}`}>{children}</body>
     </html>

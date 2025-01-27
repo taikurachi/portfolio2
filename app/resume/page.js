@@ -15,9 +15,21 @@ export default function ResumePage() {
         <div>
           <HeadingMain className="mb-4">Taisei Kurachi</HeadingMain>
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-10">
-            <span>tk2958@nyu.edu</span>
-            <span>LinkedIn</span>
-            <span>GitHub</span>
+            <Link className="hover:underline" href="mailto:tk2958@nyu.edu">
+              tk2958@nyu.edu
+            </Link>
+            <Link
+              className="hover:underline"
+              href="https://www.linkedin.com/in/taiseikurachi/"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              className="hover:underline"
+              href="https://github.com/taikurachi"
+            >
+              GitHub
+            </Link>
           </div>
         </div>
         <div>

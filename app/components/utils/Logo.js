@@ -5,8 +5,8 @@ export default function Logo({ width }) {
   return (
     <Link href="/">
       <Image
-        src="/logo.svg"
-        className="invert"
+        src="/logo-beige.svg"
+        className=""
         width={width}
         height={width / 2}
         alt="taisei kurachi logo"

@@ -105,7 +105,7 @@ export default function IntbotPage() {
         </div>
         <div>
           <HeadingLG>Challenges</HeadingLG>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-20">
             <div>
               <HeadingMD>Time constraints</HeadingMD>
               <p>
@@ -118,7 +118,7 @@ export default function IntbotPage() {
                 process, as my Co-founder wanted to see high-fidelity prototypes
                 as soon as possible.
               </p>
-              <p>
+              <p className="mb-0">
                 I couldn&apos;t fully validate my design choices through
                 usability testing. I couldn&apos;t make too many iterations
                 based on user feedback.
@@ -131,7 +131,7 @@ export default function IntbotPage() {
                 was tasked to build typographic and brand guidelines from
                 scratch.
               </p>
-              <p>
+              <p className="mb-8">
                 I decided upon two geometric fonts,{" "}
                 <span className="font-evolventa underline">Evolventa-bold</span>{" "}
                 for headings and{" "}
@@ -140,7 +140,7 @@ export default function IntbotPage() {
                 innovative brand appeal.
               </p>
               <HeadingSM>Typography</HeadingSM>
-              <div className="flex sm:flex-row flex-col gap-4 mb-8">
+              <div className="flex sm:flex-row flex-col gap-4">
                 <div className="w-full sm:w-[50%] bg-white p-4 text-black font-evolventa">
                   <div className="flex gap-4 items-center mb-5">
                     <div className="bg-gray-200 w-fit p-2 rounded-sm">
@@ -176,7 +176,6 @@ export default function IntbotPage() {
                   <p className="text-sm mb-5">Paragraph-sm</p>
                 </div>
               </div>
-              <HeadingSM>Colors</HeadingSM>
             </div>
             <div>
               <HeadingMD className="mb-4">Moving blobs</HeadingMD>

@@ -14,7 +14,7 @@ export default function BeaconPage() {
       <Header />
       <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-20 sm:mt-20 flex flex-col gap-20 pb-40">
         <div className="flex flex-col gap-10">
-          <HeadingMain>Cancer Support App Focused on Positivity</HeadingMain>
+          <HeadingMain>Cancer Support App Focused on Positivity.</HeadingMain>
           <p className="mb-0">
             A passion project inspired by a close friend diagnosed with Stage 3
             Oligodendroglioma.

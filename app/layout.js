@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Outfit } from "next/font/google";
 import Head from "next/head";
+import Script from "next/script";
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "600", "700", "800", "900"],
@@ -8,6 +9,11 @@ const outfit = Outfit({
 });
 export const metadata = {
   title: "Taisei's Portfolio",
+  icons: {
+    icon: "/favicon/favicon-32x32.png",
+    apple: "/favicon/apple-touch-icon.png",
+  },
+  manifest: "/favicon/site.webmanifest",
   description:
     "Designed and developer focused on solving problems effectively and aesthetically.",
 };
@@ -15,32 +21,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <script
-          defer
+      <body className={`antialiased ${outfit.className}`}>
+        <Script
           src="https://cloud.umami.is/script.js"
           data-website-id="708d989a-acf2-4dce-bff3-1e1c53f201be"
-        ></script>
-      </Head>
-      <body className={`antialiased ${outfit.className}`}>{children}</body>
+          strategy="lazyOnload"
+        />
+        {children}
+      </body>
     </html>
   );
 }

@@ -11,6 +11,7 @@ import HeadingLG from "../components/utils/headings/HeadingLG";
 import HeadingMD from "../components/utils/headings/HeadingMD";
 import HeadingSM from "../components/utils/headings/HeadingSM";
 import AccentText from "../components/utils/AccentText";
+import WorkCard from "../components/work/WorkCard";
 export default function IntbotPage() {
   const [version, setVersion] = useState(0);
 
@@ -26,12 +27,12 @@ export default function IntbotPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-20 flex flex-col gap-20 pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-10 sm:mt-20 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>
             Revamped IntBot website to increase user traffic.
           </HeadingMain>
-          <p>
+          <p className="mb-0">
             Intbot is an early-staged startup focusing on humanoid robots using
             machine learning and AI.
           </p>
@@ -268,6 +269,53 @@ export default function IntbotPage() {
               <HeadingSM>After</HeadingSM>
               <Video src="/intbot/intbot-1.webm" />
             </div>
+          </div>
+        </div>
+        <div>
+          <HeadingLG>Other Work</HeadingLG>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1120px] mx-auto gap-8">
+            <WorkCard
+              className="col-span-1 overflow-hidden"
+              href="/beacon"
+              color="bg-primary-salmon"
+              title="Cancer treatment support app to decrease stress."
+              tags={["Case Study", "UX/UI Design", "UX Research"]}
+            >
+              <div className="flex gap-4 w-[80%] lg:w-[80%] justify-between sm:items-start items-center top-0 sm:top-24 relative h-full mx-auto">
+                <Video
+                  altText="Beacon showcase video"
+                  src="/beacon/beacon-onboarding.webm"
+                  className="w-[200px]"
+                  videoClassName="rounded-[10%] sm:rounded-[20px]"
+                />
+                <Video
+                  altText="Beacon showcase video"
+                  src="/beacon/beacon-second.webm"
+                  className="w-[200px]"
+                  videoClassName="rounded-[10%] sm:rounded-[20px]"
+                />
+                <Video
+                  altText="Beacon showcase video"
+                  src="/beacon/beacon-home.webm"
+                  className="w-[200px]"
+                  videoClassName="rounded-[10%] sm:rounded-[20px]"
+                />
+              </div>
+            </WorkCard>
+            <WorkCard
+              className="overflow-hidden"
+              href="/songsync"
+              color="bg-primary-green"
+              title="Syncing upcoming concerts with recently played songs."
+              tags={["Front-End Engineering", "UI Design"]}
+            >
+              <Video
+                altText="Songsync showcase video"
+                src="/songsync/songsync.webm"
+                className="absolute right-0 bottom-0 translate-y-4 translate-x-4 md:w-[90%] w-[90%] sm:top-[60px] lg:top-auto lg:w-[80%]"
+              />
+            </WorkCard>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Header from "../components/utils/Header";
 import HeadingMain from "../components/utils/headings/HeadingMain";
 import HeadingLG from "../components/utils/headings/HeadingLG";
-import Image from "next/image";
+import WorkCard from "../components/work/WorkCard";
 import Footer from "../components/utils/Footer";
 import Video from "../components/utils/Video";
 import Link from "next/link";
@@ -10,7 +10,7 @@ export default function SongsyncPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-6 sm:mt-20 flex flex-col gap-20 pb-20 sm:pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-10 sm:mt-20 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>
             Syncing upcoming concerts with recently played songs.
@@ -76,6 +76,53 @@ export default function SongsyncPage() {
             wasn&apos;t able to deploy my project live because Spotify places a
             restriction on web apps until they are approved.
           </p>
+        </div>
+        <div>
+          <HeadingLG>Other Work</HeadingLG>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1120px] mx-auto gap-8">
+            <WorkCard
+              className="col-span-1 overflow-hidden"
+              href="/beacon"
+              color="bg-primary-salmon"
+              title="Cancer treatment support app to decrease stress."
+              tags={["Case Study", "UX/UI Design", "UX Research"]}
+            >
+              <div className="flex gap-4 w-[80%] lg:w-[80%] justify-between sm:items-start items-center top-0 sm:top-24 relative h-full mx-auto">
+                <Video
+                  altText="Beacon showcase video"
+                  src="/beacon/beacon-onboarding.webm"
+                  className="w-[200px]"
+                  videoClassName="rounded-[10%] sm:rounded-[20px]"
+                />
+                <Video
+                  altText="Beacon showcase video"
+                  src="/beacon/beacon-second.webm"
+                  className="w-[200px]"
+                  videoClassName="rounded-[10%] sm:rounded-[20px]"
+                />
+                <Video
+                  altText="Beacon showcase video"
+                  src="/beacon/beacon-home.webm"
+                  className="w-[200px]"
+                  videoClassName="rounded-[10%] sm:rounded-[20px]"
+                />
+              </div>
+            </WorkCard>
+            <WorkCard
+              href="/intbot"
+              className="overflow-hidden"
+              color="bg-primary-purple"
+              title="Revamped Intbot website to increase user traffic."
+              tags={["Front-End Engineering", "UX/UI Design"]}
+            >
+              <Video
+                altText="IntBot website showcase video"
+                src="/intbot/intbot-1.webm"
+                className="absolute border-gray-300 border-[4px] right-0 bottom-0 translate-y-4 translate-x-4 md:w-[90%] top-auto w-[90%] sm:top-[60px] lg:top-auto lg:w-[80%]"
+              />
+            </WorkCard>
+          </div>
         </div>
       </div>
       <Footer />

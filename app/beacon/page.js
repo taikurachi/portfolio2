@@ -8,11 +8,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Video from "../components/utils/Video";
 import AccentText from "../components/utils/AccentText";
+import WorkCard from "../components/work/WorkCard";
 export default function BeaconPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-20 sm:mt-20 flex flex-col gap-20 pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-10 sm:mt-20 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>Cancer Support App Focused on Positivity.</HeadingMain>
           <p className="mb-0">
@@ -1517,6 +1518,38 @@ export default function BeaconPage() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+        <div>
+          <HeadingLG>Other Work</HeadingLG>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1120px] mx-auto gap-8">
+            <WorkCard
+              href="/intbot"
+              className="overflow-hidden"
+              color="bg-primary-purple"
+              title="Revamped Intbot website to increase user traffic."
+              tags={["Front-End Engineering", "UX/UI Design"]}
+            >
+              <Video
+                altText="IntBot website showcase video"
+                src="/intbot/intbot-1.webm"
+                className="absolute border-gray-300 border-[4px] right-0 bottom-0 translate-y-4 translate-x-4 md:w-[90%] top-auto w-[90%] sm:top-[60px] lg:top-auto lg:w-[80%]"
+              />
+            </WorkCard>
+            <WorkCard
+              className="overflow-hidden"
+              href="/songsync"
+              color="bg-primary-green"
+              title="Syncing upcoming concerts with recently played songs."
+              tags={["Front-End Engineering", "UI Design"]}
+            >
+              <Video
+                altText="Songsync showcase video"
+                src="/songsync/songsync.webm"
+                className="absolute right-0 bottom-0 translate-y-4 translate-x-4 md:w-[90%] w-[90%] sm:top-[60px] lg:top-auto lg:w-[80%]"
+              />
+            </WorkCard>
           </div>
         </div>
       </div>

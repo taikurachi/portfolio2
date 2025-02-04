@@ -829,7 +829,7 @@ export default function BeaconPage() {
                   <Image
                     style={{
                       filter:
-                        "brightness(0) saturate(100%) invert(100%) sepia(91%) saturate(963%) hue-rotate(45deg) brightness(94%) contrast(102%)",
+                        "brightness(0) saturate(100%) invert(55%) sepia(39%) saturate(631%) hue-rotate(314deg) brightness(94%) contrast(121%)",
                     }}
                     src="/beacon/worse-icon.svg"
                     alt="worse icon"
@@ -859,7 +859,7 @@ export default function BeaconPage() {
                   <Image
                     style={{
                       filter:
-                        "brightness(0) saturate(100%) invert(55%) sepia(39%) saturate(631%) hue-rotate(314deg) brightness(94%) contrast(121%)",
+                        "brightness(0) saturate(100%) invert(100%) sepia(91%) saturate(963%) hue-rotate(45deg) brightness(94%) contrast(102%)",
                     }}
                     src="/beacon/better-icon.svg"
                     alt="better icon"

@@ -2,10 +2,10 @@ import Logo from "./Logo";
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="border-t">
-      <div className="p-10 flex flex-col md:flex-row items-start md:items-end gap-10 sm:gap-20 max-w-[1120px] mx-auto">
+    <footer className="bg-primary-beige text-black">
+      <div className="pr-10 pl-10 pb-8 pt-8 flex flex-col md:flex-row items-start md:items-end gap-10 sm:gap-20 max-w-[1120px] mx-auto ">
         <div>
-          <Logo width={100} />
+          <Logo width={80} color="black" />
           <p className="mt-4 mb-0">Designed & built by Taisei Kurachi</p>
         </div>
         <div>

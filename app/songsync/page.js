@@ -5,12 +5,14 @@ import WorkCard from "../components/work/WorkCard";
 import Footer from "../components/utils/Footer";
 import Video from "../components/utils/Video";
 import Link from "next/link";
+import BackButton from "../components/utils/BackButton";
 
 export default function SongsyncPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-10 sm:mt-20 flex flex-col gap-20 pb-20 sm:pb-40">
+      <BackButton />
+      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-10 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>
             Syncing upcoming concerts with recently played songs.

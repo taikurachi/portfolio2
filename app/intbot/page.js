@@ -12,6 +12,7 @@ import HeadingMD from "../components/utils/headings/HeadingMD";
 import HeadingSM from "../components/utils/headings/HeadingSM";
 import AccentText from "../components/utils/AccentText";
 import WorkCard from "../components/work/WorkCard";
+import BackButton from "../components/utils/BackButton";
 export default function IntbotPage() {
   const [version, setVersion] = useState(0);
 
@@ -27,7 +28,8 @@ export default function IntbotPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-10 sm:mt-20 flex flex-col gap-20 pb-20 sm:pb-40">
+      <BackButton />
+      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-10 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>
             Revamped IntBot website to increase user traffic.

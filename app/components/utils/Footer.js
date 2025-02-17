@@ -1,13 +1,20 @@
 "use client";
 import { useCursor } from "../cursorContext/CursorContext";
+import { useEffect, useRef } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 export default function Footer() {
   const { setCursorProperties, cursorProperties } = useCursor();
-  const previousColor = cursorProperties?.color;
-  console.log(previousColor);
+  const initialColor = useRef(cursorProperties?.color);
+
+  useEffect(() => {
+    if (cursorProperties?.color !== "bg-black") {
+      initialColor.current = cursorProperties.color;
+    }
+  }, [cursorProperties?.color]);
+
   const cardEnter = () => setCursorProperties({ color: "bg-black" });
-  const cardLeave = () => setCursorProperties({ color: previousColor });
+  const cardLeave = () => setCursorProperties({ color: initialColor.current });
 
   return (
     <footer
@@ -23,11 +30,21 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-2xl mb-2 md:mb-4">Contact</h4>
           <div className="flex sm:flex-row flex-col gap-2 sm:gap-10">
-            <Link href="https://www.linkedin.com/in/taiseikurachi/">
+            <Link
+              href="https://www.linkedin.com/in/taiseikurachi/"
+              className="hover:underline"
+            >
               LinkedIn
             </Link>
-            <Link href="mailto:tk2958@nyu.edu">tk2958@nyu.edu</Link>
-            <Link href="https://github.com/taikurachi">GitHub</Link>
+            <Link href="mailto:tk2958@nyu.edu" className="hover:underline">
+              tk2958@nyu.edu
+            </Link>
+            <Link
+              href="https://github.com/taikurachi"
+              className="hover:underline"
+            >
+              GitHub
+            </Link>
           </div>
         </div>
       </div>

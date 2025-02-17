@@ -15,10 +15,10 @@ import { useCursor } from "../components/cursorContext/CursorContext";
 import { useEffect } from "react";
 
 export default function BeaconPage() {
-  // const { setCursorProperties } = useCursor();
+  const { setCursorProperties } = useCursor();
   useEffect(() => {
-    // setCursorProperties({ color: "bg-primary-salmon" });
-  }, []);
+    setCursorProperties({ color: "bg-primary-salmon" });
+  }, [setCursorProperties]);
   return (
     <>
       <Header />

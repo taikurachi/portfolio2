@@ -15,10 +15,10 @@ import WorkCard from "../components/work/WorkCard";
 import BackButton from "../components/utils/BackButton";
 import { useCursor } from "../components/cursorContext/CursorContext";
 export default function IntbotPage() {
-  // const { setCursorProperties } = useCursor();
+  const { setCursorProperties } = useCursor();
   useEffect(() => {
-    // setCursorProperties({ color: "bg-primary-purple" });
-  }, []);
+    setCursorProperties({ color: "bg-primary-purple" });
+  }, [setCursorProperties]);
 
   const [version, setVersion] = useState(0);
 

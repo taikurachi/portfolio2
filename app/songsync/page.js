@@ -10,10 +10,10 @@ import BackButton from "../components/utils/BackButton";
 import { useCursor } from "../components/cursorContext/CursorContext";
 import { useEffect } from "react";
 export default function SongsyncPage() {
-  // const { setCursorProperties } = useCursor();
+  const { setCursorProperties } = useCursor();
   useEffect(() => {
-    // setCursorProperties({ color: "bg-primary-green" });
-  }, []);
+    setCursorProperties({ color: "bg-primary-green" });
+  }, [setCursorProperties]);
   return (
     <>
       <Header />

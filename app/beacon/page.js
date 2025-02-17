@@ -15,7 +15,7 @@ import { useCursor } from "../components/cursorContext/CursorContext";
 import { useEffect } from "react";
 
 export default function BeaconPage() {
-  const { setCursorProperties } = useCursor();
+  const { setCursorProperties, cursorProperties } = useCursor();
   useEffect(() => {
     setCursorProperties({ color: "bg-primary-salmon" });
   }, [setCursorProperties]);
@@ -1583,7 +1583,7 @@ export default function BeaconPage() {
             <WorkCard
               className="overflow-hidden"
               href="/songsync"
-              color="bg-primary-green"
+              color="bg-primary-lightGreen"
               title="Syncing upcoming concerts with recently played songs."
               tags={["Front-End Engineering", "UI Design"]}
             >

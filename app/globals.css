@@ -42,7 +42,9 @@
     --foreground: #ededed;
   }
 } */
-
+* {
+  /* cursor: none; */
+}
 body {
   font-family: "Outfit", "sans-serif";
   background-color: var(--background-color);

@@ -1,8 +1,18 @@
+"use client";
+import { useCursor } from "../cursorContext/CursorContext";
 import Logo from "./Logo";
 import Link from "next/link";
 export default function Footer() {
+  const { setCursorProperties } = useCursor();
+  const cardEnter = () => setCursorProperties({ color: "bg-black" });
+  const cardLeave = () => setCursorProperties({ color: "" });
+
   return (
-    <footer className="bg-primary-beige text-black">
+    <footer
+      onMouseEnter={cardEnter}
+      onMouseLeave={cardLeave}
+      className="bg-primary-beige text-black"
+    >
       <div className="pr-10 pl-10 pb-8 pt-8 flex flex-col md:flex-row items-start md:items-end gap-10 sm:gap-20 max-w-[1120px] mx-auto ">
         <div>
           <Logo width={80} color="black" />

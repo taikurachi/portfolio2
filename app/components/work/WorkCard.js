@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { useCursor } from "../cursorContext/CursorContext";
 export default function WorkCard({
   title,
   tags,
@@ -6,9 +8,22 @@ export default function WorkCard({
   color,
   className,
   href,
+  cardLeave,
+  cardEnter,
 }) {
+  const { setCursorVariant, setCursorProperties } = useCursor();
+  const handleClick = () => {
+    setCursorVariant("default");
+    setCursorProperties({ text: "" });
+  };
   return (
-    <Link href={href} className={className}>
+    <Link
+      onMouseEnter={cardEnter}
+      onMouseLeave={cardLeave}
+      href={href}
+      className={className}
+      onClick={handleClick}
+    >
       <div className={`bg-[#636363] rounded-lg p-4 flex flex-col gap-6`}>
         <div className={`rounded-lg h-[300px] relative ${color} ${className}`}>
           {children}

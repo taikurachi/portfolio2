@@ -5,7 +5,7 @@ import Video from "../components/utils/Video";
 import Link from "next/link";
 import Image from "next/image";
 import AssetDisplayColumn from "../components/utils/AssetDisplayColumn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeadingMain from "../components/utils/headings/HeadingMain";
 import HeadingLG from "../components/utils/headings/HeadingLG";
 import HeadingMD from "../components/utils/headings/HeadingMD";
@@ -13,7 +13,13 @@ import HeadingSM from "../components/utils/headings/HeadingSM";
 import AccentText from "../components/utils/AccentText";
 import WorkCard from "../components/work/WorkCard";
 import BackButton from "../components/utils/BackButton";
+import { useCursor } from "../components/cursorContext/CursorContext";
 export default function IntbotPage() {
+  const { setCursorProperties } = useCursor();
+  useEffect(() => {
+    setCursorProperties({ color: "bg-primary-purple" });
+  }, [setCursorProperties]);
+
   const [version, setVersion] = useState(0);
 
   const dynamicVideoLink = [
@@ -280,7 +286,7 @@ export default function IntbotPage() {
             <WorkCard
               className="col-span-1 overflow-hidden"
               href="/beacon"
-              color="bg-primary-salmon"
+              color="bg-primary-lightSalmon"
               title="Cancer treatment support app to decrease stress."
               tags={["Case Study", "UX/UI Design", "UX Research"]}
             >
@@ -308,7 +314,7 @@ export default function IntbotPage() {
             <WorkCard
               className="overflow-hidden"
               href="/songsync"
-              color="bg-primary-green"
+              color="bg-primary-lightGreen"
               title="Syncing upcoming concerts with recently played songs."
               tags={["Front-End Engineering", "UI Design"]}
             >

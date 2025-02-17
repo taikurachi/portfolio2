@@ -1,7 +1,5 @@
 export default function AccentText({ children, color, className }) {
   return (
-    <span style={{ color: color }} className={`${className}`}>
-      {children}
-    </span>
+    <span className={`${className} ${color ? color : ""}`}>{children}</span>
   );
 }

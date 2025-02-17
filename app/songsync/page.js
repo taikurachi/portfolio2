@@ -1,3 +1,4 @@
+"use client";
 import Header from "../components/utils/Header";
 import HeadingMain from "../components/utils/headings/HeadingMain";
 import HeadingLG from "../components/utils/headings/HeadingLG";
@@ -6,8 +7,13 @@ import Footer from "../components/utils/Footer";
 import Video from "../components/utils/Video";
 import Link from "next/link";
 import BackButton from "../components/utils/BackButton";
-
+import { useCursor } from "../components/cursorContext/CursorContext";
+import { useEffect } from "react";
 export default function SongsyncPage() {
+  const { setCursorProperties } = useCursor();
+  useEffect(() => {
+    setCursorProperties({ color: "bg-primary-green" });
+  }, [setCursorProperties]);
   return (
     <>
       <Header />
@@ -86,7 +92,7 @@ export default function SongsyncPage() {
             <WorkCard
               className="col-span-1 overflow-hidden"
               href="/beacon"
-              color="bg-primary-salmon"
+              color="bg-primary-lightSalmon"
               title="Cancer treatment support app to decrease stress."
               tags={["Case Study", "UX/UI Design", "UX Research"]}
             >
@@ -114,7 +120,7 @@ export default function SongsyncPage() {
             <WorkCard
               href="/intbot"
               className="overflow-hidden"
-              color="bg-primary-purple"
+              color="bg-primary-lightPurple"
               title="Revamped Intbot website to increase user traffic."
               tags={["Front-End Engineering", "UX/UI Design"]}
             >

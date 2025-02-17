@@ -10,11 +10,14 @@ export default {
       colors: {
         primary: {
           black: "#1f1f1f",
-          purple: "#EEE0FF",
+          purple: "#8E86FF",
+          lightPurple: "#C4C0FF",
           blue: "#C2EAF3",
           pink: "#f15bb5",
-          salmon: "#FFC0BA",
-          green: "#B3E8CA",
+          salmon: "#FF9595",
+          lightSalmon: "#FFDFDF",
+          green: "#4ED880",
+          lightGreen: "#DDF2E6",
           beige: "#f9f8eb",
           darkBeige: "#7c7c6f",
         },

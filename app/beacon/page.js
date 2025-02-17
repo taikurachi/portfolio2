@@ -1,3 +1,4 @@
+"use client";
 import Header from "../components/utils/Header";
 import Footer from "../components/utils/Footer";
 import HeadingMain from "../components/utils/headings/HeadingMain";
@@ -10,8 +11,14 @@ import Video from "../components/utils/Video";
 import AccentText from "../components/utils/AccentText";
 import WorkCard from "../components/work/WorkCard";
 import BackButton from "../components/utils/BackButton";
+import { useCursor } from "../components/cursorContext/CursorContext";
+import { useEffect } from "react";
 
 export default function BeaconPage() {
+  const { setCursorProperties } = useCursor();
+  useEffect(() => {
+    setCursorProperties({ color: "bg-primary-salmon" });
+  }, [setCursorProperties]);
   return (
     <>
       <Header />
@@ -42,7 +49,7 @@ export default function BeaconPage() {
           </div>
           <Link
             href="https://www.figma.com/proto/2j2nde84XUpr5ERidav8NH/Beacon-Prototyping?page-id=0%3A1&node-id=41-569&viewport=-1015%2C140%2C0.52&t=GHzeyB6fRfv7gydb-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=41%3A569&show-proto-sidebar=1"
-            className="rounded-lg p-2 pr-4 pl-4 text-lg bg-primary-salmon hover:bg-primary-purple text-black w-fit  transition-colors"
+            className="rounded-lg p-2 pr-4 pl-4 text-lg bg-primary-lightSalmon hover:bg-primary-purple text-black w-fit  transition-colors"
           >
             View prototype
           </Link>
@@ -52,17 +59,18 @@ export default function BeaconPage() {
             <HeadingLG className="mb-4">Impact</HeadingLG>
             <ul className="list-disc ml-4">
               <li>
-                <AccentText color="#FFC0BA">60%</AccentText> of testers felt
-                significantly more optimistic after app usage
+                <AccentText color="text-primary-salmon">60%</AccentText> of
+                testers felt significantly more optimistic after app usage
               </li>
               <li>
                 Increased user engagement for{" "}
-                <AccentText color="#FFC0BA">60%</AccentText> of testers through
-                delivering personalized content
+                <AccentText color="text-primary-salmon">60%</AccentText> of
+                testers through delivering personalized content
               </li>
               <li>
                 Decreased stress and anxiety levels for{" "}
-                <AccentText color="#FFC0BA">40%</AccentText> of testers.
+                <AccentText color="text-primary-salmon">40%</AccentText> of
+                testers.
               </li>
             </ul>
           </div>
@@ -96,29 +104,36 @@ export default function BeaconPage() {
           </p>
           <p className="text-xl font-semibold">
             How can we reframe the experience of cancer to make it more{" "}
-            <AccentText color="#FFC0BA">hopeful</AccentText> and{" "}
-            <AccentText color="#FFC0BA">positive</AccentText> to decrease stress
-            for everyone involved
-            <AccentText color="#FFC0BA">?</AccentText>
+            <AccentText color="text-primary-salmon">hopeful</AccentText> and{" "}
+            <AccentText color="text-primary-salmon">positive</AccentText> to
+            decrease stress for everyone involved
+            <AccentText color="text-primary-salmon">?</AccentText>
           </p>
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2">
             <div className="sm:border-r w-full border-b p-0 sm:pr-10 pb-10">
               <HeadingMD>Depression & Anxiety</HeadingMD>
               <p>
                 Research published in British Medical Journal reported that
-                approximately <AccentText color="#FFC0BA">20%</AccentText> and
-                of cancer patients suffer from depression, and{" "}
-                <AccentText color="#FFC0BA">10%</AccentText> and experience
-                anxiety disorders.
+                approximately{" "}
+                <AccentText color="text-primary-salmon">20%</AccentText> and of
+                cancer patients suffer from depression, and{" "}
+                <AccentText color="text-primary-salmon">10%</AccentText> and
+                experience anxiety disorders.
               </p>
               <p className="m-0">
-                <AccentText className="text-3xl font-bold" color="#FFC0BA">
+                <AccentText
+                  className="text-3xl font-bold"
+                  color="text-primary-salmon"
+                >
                   20%
                 </AccentText>{" "}
                 suffer from depression.
               </p>
               <p className="m-0">
-                <AccentText className="text-3xl font-bold" color="#FFC0BA">
+                <AccentText
+                  className="text-3xl font-bold"
+                  color="text-primary-salmon"
+                >
                   10%
                 </AccentText>{" "}
                 experience anxiety disorders.
@@ -128,11 +143,14 @@ export default function BeaconPage() {
               <HeadingMD>Cancer-related PTSD</HeadingMD>
               <p>
                 Journal of Clinical Oncology found that about{" "}
-                <AccentText color="#FFC0BA">22%</AccentText> of cancer survivors
-                present with lifetime cancer-related PTSD.
+                <AccentText color="text-primary-salmon">22%</AccentText> of
+                cancer survivors present with lifetime cancer-related PTSD.
               </p>
               <p className="m-0">
-                <AccentText className="text-3xl font-bold" color="#FFC0BA">
+                <AccentText
+                  className="text-3xl font-bold"
+                  color="text-primary-salmon"
+                >
                   22%
                 </AccentText>{" "}
                 of cancer survivors present with PTSD.
@@ -144,13 +162,13 @@ export default function BeaconPage() {
               <ul className="list-disc ml-8">
                 <li>
                   stress hormones{" "}
-                  <AccentText color="#FFC0BA">
+                  <AccentText color="text-primary-salmon">
                     can cause tumors to grow and spread.
                   </AccentText>
                 </li>
                 <li>
                   stress can{" "}
-                  <AccentText color="#FFC0BA">
+                  <AccentText color="text-primary-salmon">
                     suppress the immune system
                   </AccentText>
                   , making it harder for the body to fight cancer.
@@ -162,18 +180,22 @@ export default function BeaconPage() {
               <ul className="list-disc ml-8">
                 <li>
                   lack of{" "}
-                  <AccentText color="#FFC0BA">personalization</AccentText>
+                  <AccentText color="text-primary-salmon">
+                    personalization
+                  </AccentText>
                 </li>
                 <li>
                   lack of{" "}
-                  <AccentText color="#FFC0BA">
+                  <AccentText color="text-primary-salmon">
                     positivity and optimism
                   </AccentText>
                 </li>
                 <li>
                   only for certain cancers,{" "}
-                  <AccentText color="#FFC0BA">not inclusive</AccentText> of
-                  every patient
+                  <AccentText color="text-primary-salmon">
+                    not inclusive
+                  </AccentText>{" "}
+                  of every patient
                 </li>
               </ul>
             </div>
@@ -184,7 +206,7 @@ export default function BeaconPage() {
           <p>
             To decrease stress, anxiety, and depression for cancer-diagnosed
             patients, I created an{" "}
-            <AccentText color="#FFC0BA">
+            <AccentText color="text-primary-salmon">
               education, visualization, support
             </AccentText>{" "}
             app that helps patients and surrounding people understand and
@@ -193,12 +215,16 @@ export default function BeaconPage() {
           <p>
             A study published in the Journal of Clinical Oncology found that
             patients who are well-informed about their cancer and treatment
-            options experience <AccentText color="#FFC0BA">20-30%</AccentText>{" "}
-            lower levels of anxiety and depression compared to those who feel
+            options experience{" "}
+            <AccentText color="text-primary-salmon">20-30%</AccentText> lower
+            levels of anxiety and depression compared to those who feel
             uncertain about their care.
           </p>
           <p className="">
-            <AccentText className="text-3xl font-bold" color="#FFC0BA">
+            <AccentText
+              className="text-3xl font-bold"
+              color="text-primary-salmon"
+            >
               20-30%
             </AccentText>{" "}
             lower levels of anxiety and depression when informed about their
@@ -272,7 +298,10 @@ export default function BeaconPage() {
           <HeadingLG>Process</HeadingLG>
           <div className="flex gap-10 flex-col lg:flex-row">
             <div className="flex gap-8">
-              <AccentText className="font-bold text-3xl" color="#FFC0BA">
+              <AccentText
+                className="font-bold text-3xl"
+                color="text-primary-salmon"
+              >
                 01
               </AccentText>{" "}
               <div>
@@ -285,7 +314,10 @@ export default function BeaconPage() {
               </div>
             </div>
             <div className="flex gap-8">
-              <AccentText className="font-bold text-3xl" color="#FFC0BA">
+              <AccentText
+                className="font-bold text-3xl"
+                color="text-primary-salmon"
+              >
                 02
               </AccentText>
               <div>
@@ -300,7 +332,10 @@ export default function BeaconPage() {
               </div>
             </div>
             <div className="flex gap-8">
-              <AccentText className="font-bold text-3xl" color="#FFC0BA">
+              <AccentText
+                className="font-bold text-3xl"
+                color="text-primary-salmon"
+              >
                 03
               </AccentText>
               <div>
@@ -387,9 +422,17 @@ export default function BeaconPage() {
                 It&apos;s evident that existing apps do have support resources
                 and articles that inform users of their diagnosis. What&apos;s
                 missing is the{" "}
-                <AccentText color="#FFC0BA">optimistic energy</AccentText>,{" "}
-                <AccentText color="#FFC0BA">personalization</AccentText>, and{" "}
-                <AccentText color="#FFC0BA">treatment visualization</AccentText>{" "}
+                <AccentText color="text-primary-salmon">
+                  optimistic energy
+                </AccentText>
+                ,{" "}
+                <AccentText color="text-primary-salmon">
+                  personalization
+                </AccentText>
+                , and{" "}
+                <AccentText color="text-primary-salmon">
+                  treatment visualization
+                </AccentText>{" "}
                 that breaks down the diagnosis into simpler terms. For my
                 redesign, I wanted to focus on these key features.
               </p>
@@ -402,14 +445,14 @@ export default function BeaconPage() {
                   <p>
                     Here is an example google search for the survival rate of
                     Glioblastoma. When patients see the{" "}
-                    <AccentText color="#FFC0BA">
+                    <AccentText color="text-primary-salmon">
                       6.9% 5-year survival rate
                     </AccentText>
                     , specifically younger patients, they may be discouraged,
                     which can lead to worsening of symptoms, furthering
                     depression or anxiety. Instead of focusing solely on
                     survival rates or grim statistics, I aimed to emphasize{" "}
-                    <AccentText color="#FFC0BA">
+                    <AccentText color="text-primary-salmon">
                       positive words of affirmation, treatment options, support
                       resources, and success stories
                     </AccentText>
@@ -466,13 +509,19 @@ export default function BeaconPage() {
                     user to access the core features of the app.
                   </p>
                   <p className="m-0">
-                    <AccentText className="text-3xl font-bold" color="#FFC0BA">
+                    <AccentText
+                      className="text-3xl font-bold"
+                      color="text-primary-salmon"
+                    >
                       12+
                     </AccentText>{" "}
                     clicks just to access content.
                   </p>
                   <p>
-                    <AccentText className="text-3xl font-bold" color="#FFC0BA">
+                    <AccentText
+                      className="text-3xl font-bold"
+                      color="text-primary-salmon"
+                    >
                       5 minutes
                     </AccentText>{" "}
                     approximate time to onboard.
@@ -487,7 +536,7 @@ export default function BeaconPage() {
                   <p>
                     This was the home screen for ACS CARES app. I signed up as
                     someone “having a loved one with brain cancer”. As a user,{" "}
-                    <AccentText color="#FFC0BA">
+                    <AccentText color="text-primary-salmon">
                       I want to learn more about the specific cancer without
                       having to look everywhere for relevant info
                     </AccentText>
@@ -512,7 +561,7 @@ export default function BeaconPage() {
                     diagnoses and the challenges they face with support apps. I
                     interviewed my friend and analyzed data from Reddit threads
                     to identify{" "}
-                    <AccentText color="#FFC0BA">
+                    <AccentText color="text-primary-salmon">
                       paint points, feature ideas, and user needs,
                     </AccentText>{" "}
                     which I organized into an affinity map.
@@ -667,11 +716,11 @@ export default function BeaconPage() {
                     <HeadingSM>Home Screen</HeadingSM>
                     <p>
                       Users can access{" "}
-                      <AccentText color="#FFC0BA">
+                      <AccentText color="text-primary-salmon">
                         personalized content{" "}
                       </AccentText>
                       and{" "}
-                      <AccentText color="#FFC0BA">
+                      <AccentText color="text-primary-salmon">
                         suggested support groups
                       </AccentText>{" "}
                       in the home screen.
@@ -687,7 +736,7 @@ export default function BeaconPage() {
                     <HeadingSM>Treatment Visualization</HeadingSM>
                     <p>
                       Users can view{" "}
-                      <AccentText color="#FFC0BA">
+                      <AccentText color="text-primary-salmon">
                         how their cancer treatment
                       </AccentText>{" "}
                       fights cancer.
@@ -706,7 +755,7 @@ export default function BeaconPage() {
                     Instead of making users sign up right away, I delayed the
                     account creation until it was absolutely necessary to
                     prevent friction and decrease drop offs.
-                    <AccentText color="#FFC0BA">
+                    <AccentText color="text-primary-salmon">
                       *progressive onboarding
                     </AccentText>
                   </p>
@@ -732,7 +781,7 @@ export default function BeaconPage() {
               <p>
                 I iterated upon my sketches and constructed these lo-fi
                 prototypes to get some{" "}
-                <AccentText color="#FFC0BA">
+                <AccentText color="text-primary-salmon">
                   user feedback early in the process
                 </AccentText>
                 . If there was anything I needed to change, I could do so
@@ -759,7 +808,7 @@ export default function BeaconPage() {
               <p>
                 I tested my prototype with three users who were curious to learn
                 more about different cancer treatments.{" "}
-                <AccentText color="#FFC0BA">
+                <AccentText color="text-primary-salmon">
                   All users liked the personalized articles and success stories
                   that were introduced at the start
                 </AccentText>
@@ -779,8 +828,8 @@ export default function BeaconPage() {
               <HeadingMD>Uncertainty over support groups</HeadingMD>
               <p className="mb-2">
                 Some users noted that the{" "}
-                <AccentText color="#FFC0BA">regulation</AccentText> of these
-                in-app support groups may be difficult.
+                <AccentText color="text-primary-salmon">regulation</AccentText>{" "}
+                of these in-app support groups may be difficult.
               </p>
               <ol className="list-decimal ml-8 mb-4">
                 <li>
@@ -875,7 +924,7 @@ export default function BeaconPage() {
                 Support groups sound great in theory. What can go wrong for a
                 safe space where patients can share struggles and help each
                 other?{" "}
-                <AccentText color="#FFC0BA">
+                <AccentText color="text-primary-salmon">
                   The vulnerability of cancer patients, combined with the
                   potential for misinformation or harmful interactions, makes it
                   too risky to let users provide support to one another.
@@ -1139,7 +1188,7 @@ export default function BeaconPage() {
                   </div>
                   <p className="mb-0">
                     Most importantly,{" "}
-                    <AccentText color="#FFC0BA">
+                    <AccentText color="text-primary-salmon">
                       none of my features had a negative effect on the 5 users
                       tested
                     </AccentText>
@@ -1151,20 +1200,22 @@ export default function BeaconPage() {
                   <HeadingSM>Notable Outcomes</HeadingSM>
                   <p>
                     The most significant outcome was the{" "}
-                    <AccentText color="#FFC0BA">increased optimism</AccentText>{" "}
+                    <AccentText color="text-primary-salmon">
+                      increased optimism
+                    </AccentText>{" "}
                     users felt after seeing success stories. This makes sense,
                     as users are often encouraged when they see someone in a
                     similar situation improve.
                   </p>
                   <p>
-                    <AccentText color="#FFC0BA">60%</AccentText> of users
-                    reported no change in their feelings when learning more
-                    about their diagnosis, which is understandable given the
-                    neutral nature of facts. Proactive users may have also done
-                    their own research prior. After discussing with some users,
-                    many have noted that the first thing they would do is to
-                    search up their diagnosis on Google. It wouldn’t make sense
-                    for users to go straight to downloading the app.
+                    <AccentText color="text-primary-salmon">60%</AccentText> of
+                    users reported no change in their feelings when learning
+                    more about their diagnosis, which is understandable given
+                    the neutral nature of facts. Proactive users may have also
+                    done their own research prior. After discussing with some
+                    users, many have noted that the first thing they would do is
+                    to search up their diagnosis on Google. It wouldn’t make
+                    sense for users to go straight to downloading the app.
                   </p>
                 </div>
               </div>
@@ -1530,7 +1581,7 @@ export default function BeaconPage() {
             <WorkCard
               href="/intbot"
               className="overflow-hidden"
-              color="bg-primary-purple"
+              color="bg-primary-lightPurple"
               title="Revamped Intbot website to increase user traffic."
               tags={["Front-End Engineering", "UX/UI Design"]}
             >
@@ -1556,7 +1607,6 @@ export default function BeaconPage() {
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );

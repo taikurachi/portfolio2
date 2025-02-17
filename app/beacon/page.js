@@ -15,10 +15,10 @@ import { useCursor } from "../components/cursorContext/CursorContext";
 import { useEffect } from "react";
 
 export default function BeaconPage() {
-  const { setCursorProperties } = useCursor();
+  // const { setCursorProperties } = useCursor();
   useEffect(() => {
-    setCursorProperties({ color: "bg-primary-salmon" });
-  }, [setCursorProperties]);
+    // setCursorProperties({ color: "bg-primary-salmon" });
+  }, []);
   return (
     <>
       <Header />
@@ -1498,17 +1498,6 @@ export default function BeaconPage() {
                   base to be effective.
                 </p>
               </div>
-              {/* <div>
-                <HeadingSM>Simulating Design Handoffs</HeadingSM>
-                <p>
-                  In a real-world environment, there would be multiple teams
-                  working on this project. To simulate how I would pass on a
-                  design to a dev, I created this guide on colors, typography,
-                  and spacing. While designing the project, I made sure to align
-                  my design system with development libraries such as
-                  TailwindCSS or Material-UI.
-                </p>
-              </div> */}
             </div>
             <div>
               <HeadingMD>Reflections & Notes</HeadingMD>
@@ -1550,7 +1539,7 @@ export default function BeaconPage() {
                     Keeping the database current and ensuring users receive
                     accurate, evidence-based information requires continuous
                     updates, partnerships with medical organizations, and
-                    regular maintenance of the app’s content.
+                    regular maintenance of the app&apos;s content.
                   </li>
                 </ol>
               </div>

@@ -8,12 +8,14 @@ import { useEffect } from "react";
 export default function Home() {
   const { setCursorProperties } = useCursor();
   useEffect(() => {
-    setCursorProperties((prev) => {
-      if (prev.color !== "bg-primary-beige") {
-        return { color: "bg-primary-beige" };
-      }
-      return prev;
-    });
+    if (typeof window !== "undefined") {
+      setCursorProperties((prev) => {
+        if (prev.color !== "bg-primary-beige") {
+          return { color: "bg-primary-beige" };
+        }
+        return prev;
+      });
+    }
   }, [setCursorProperties]);
   return (
     <>

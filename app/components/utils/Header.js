@@ -1,7 +1,5 @@
-"use client";
 import Logo from "./Logo";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 export default function Header() {
   return (
     <header className={`sticky top-0 bg-primary-black z-10`}>

@@ -6,10 +6,12 @@ import { useCursor } from "../cursorContext/CursorContext";
 export default function CustomCursor() {
   const { cursorProperties, cursorVariant } = useCursor();
   const [position, setPosition] = useState({
-    x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
+    x: 0,
+    y: 0,
   });
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const mouseMove = (e) => {
       setPosition({
         x: e.clientX,
@@ -17,9 +19,7 @@ export default function CustomCursor() {
       });
     };
     window.addEventListener("mousemove", mouseMove);
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    };
+    return () => window.removeEventListener("mousemove", mouseMove);
   }, []);
 
   const variants = {

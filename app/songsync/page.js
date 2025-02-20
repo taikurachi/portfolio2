@@ -31,7 +31,7 @@ export default function SongsyncPage() {
             <Video src="/songsync/songsync.webm" altText="songsync demo" />
           </div>
           <Link
-            href="https://www.figma.com/proto/2j2nde84XUpr5ERidav8NH/Beacon-Prototyping?page-id=0%3A1&node-id=41-569&viewport=-1015%2C140%2C0.52&t=GHzeyB6fRfv7gydb-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=41%3A569&show-proto-sidebar=1"
+            href="https://github.com/taikurachi/Songsync"
             className="rounded-lg p-2 pr-4 pl-4 text-lg bg-primary-green hover:bg-primary-purple text-black w-fit  transition-colors"
           >
             View code

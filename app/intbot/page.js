@@ -76,16 +76,22 @@ export default function IntbotPage() {
             <ul className="list-disc ml-4">
               <li>
                 Increased user traffic by{" "}
-                <AccentText color="#EEE0FF">30%</AccentText>
+                <AccentText color="text-primary-lightPurple">30%</AccentText>
               </li>
               <li>
-                Built <AccentText color="#EEE0FF">typographic</AccentText> and{" "}
-                <AccentText color="#EEE0FF">layout</AccentText> system to
-                establish brand consistency and professionalism.
+                Built{" "}
+                <AccentText color="text-primary-lightPurple">
+                  typographic
+                </AccentText>{" "}
+                and{" "}
+                <AccentText color="text-primary-lightPurple">layout</AccentText>{" "}
+                system to establish brand consistency and professionalism.
               </li>
               <li>
                 Created reusable{" "}
-                <AccentText color="#EEE0FF">React + TypeScript</AccentText>{" "}
+                <AccentText color="text-primary-lightPurple">
+                  React + TypeScript
+                </AccentText>{" "}
                 components for scalability and efficiency.
               </li>
             </ul>

@@ -1,7 +1,6 @@
 import * as motion from "motion/react-client";
+import Image from "next/image";
 export default function Hero() {
-  const titleName = "Designer";
-
   return (
     <main className="p-10 max-w-[1120px] mx-auto h-svh flex items-center mt-[-100px]">
       <div>
@@ -64,10 +63,10 @@ export default function Hero() {
             i
           </motion.span>
           <motion.span
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1, rotate: 360 }}
             transition={{
-              duration: 1,
+              duration: 1.4,
               type: "spring",
               stiffness: 200,
               damping: 10,
@@ -105,23 +104,46 @@ export default function Hero() {
         >
           Developer
         </motion.h1>
-        <motion.p
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            duration: 1,
-            type: "spring",
-            stiffness: 200,
-            damping: 10,
-            ease: "linear",
-            delay: 1.8,
-          }}
-          className="text-xl md:text-2xl mt-10"
-        >
-          I&apos;m <span className="font-bold">Taisei Kurachi</span>, I
-          specialize in crafting efficient & aesthetic Front-End / Product
-          experiences.
-        </motion.p>
+        <div className="flex items-center gap-4">
+          <motion.p
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              stiffness: 200,
+              damping: 10,
+              ease: "linear",
+              delay: 1.8,
+            }}
+            className="text-xl md:text-2xl mt-10"
+          >
+            I&apos;m <span className="font-bold">Taisei Kurachi</span>,
+            specializing in crafting intuitive and memorable product
+            experiences.
+          </motion.p>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1, rotate: 360 }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              stiffness: 200,
+              damping: 10,
+              ease: "linear",
+              delay: 2.4,
+            }}
+            className="mt-2"
+          >
+            <Image
+              src="/arrow-beige.svg"
+              className="-rotate-[135deg]"
+              width={20}
+              height={20}
+              alt="arrow image"
+            />
+          </motion.div>
+        </div>
       </div>
     </main>
   );

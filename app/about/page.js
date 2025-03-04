@@ -147,38 +147,6 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        <div>
-          <HeadingLG className="mb-4">
-            How I Became Interested in Development
-          </HeadingLG>
-          <p>
-            I became interested in development after my first web development
-            class in freshmen year. I remember being intimidated by the large
-            HTML skeleton when I was creating my first websites. Ever since
-            then, I&apos;ve been continuously learning the fundamentals, new
-            technologies, and more computer science theory. I&apos;ve made it a
-            goal to spent at least an hour of coding a day to build upon my
-            skills.
-          </p>
-          <div className="flex sm:flex-row flex-col gap-4 sm:gap-10">
-            <Image
-              className="w-1/2 md:min-w-[300px]"
-              src="/about/book.webp"
-              height={500}
-              width={400}
-              alt="psychology of success book"
-            />
-            <p>
-              Through this book, I learned about the brain&apos;s neuroplastic
-              capabilities. I was scared about learning how to code because of
-              my preconceived notions of how challenging it was and it was only
-              for the smartest people. This book gave me more confidence that
-              being “smart” isn&apos;t just genetic but you can teach yourself
-              to be “smart” as long as you immerse yourself in the proper
-              environment and spend hours practicing.
-            </p>
-          </div>
-        </div>
       </div>
       <Footer />
     </>

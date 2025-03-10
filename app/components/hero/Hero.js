@@ -104,8 +104,8 @@ export default function Hero() {
         >
           Developer
         </motion.h1>
-        <div className="flex items-center gap-4">
-          <motion.p
+        <div>
+          <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{
@@ -116,32 +116,38 @@ export default function Hero() {
               ease: "linear",
               delay: 1.8,
             }}
-            className="text-xl md:text-2xl mt-10"
+            className="inline-block mt-10"
           >
-            I&apos;m <span className="font-bold">Taisei Kurachi</span>,
-            specializing in crafting intuitive and memorable product
-            experiences.
-          </motion.p>
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1, rotate: 360 }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              stiffness: 200,
-              damping: 10,
-              ease: "linear",
-              delay: 2.4,
-            }}
-            className="mt-2"
-          >
-            <Image
-              src="/arrow-beige.svg"
-              className="-rotate-[135deg]"
-              width={20}
-              height={20}
-              alt="arrow image"
-            />
+            <p className="inline text-xl md:text-2xl">
+              I&apos;m <span className="font-bold">Taisei Kurachi</span>,
+              specializing in crafting intuitive and memorable product
+              experiences.
+            </p>
+            <motion.div
+              className="inline-block ml-2 sm:ml-3"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1, rotate: 360, translateY: 1 }}
+              transition={{
+                duration: 1,
+                type: "spring",
+                stiffness: 200,
+                damping: 10,
+                ease: "linear",
+                delay: 2.4,
+              }}
+            >
+              <Image
+                style={{
+                  filter:
+                    "brightness(0) saturate(100%) invert(81%) sepia(33%) saturate(134%) hue-rotate(150deg) brightness(90%) contrast(92%)",
+                }}
+                src="/arrow-black.svg"
+                className="-rotate-[135deg]"
+                width={16}
+                height={16}
+                alt="arrow image"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>

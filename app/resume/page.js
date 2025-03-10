@@ -50,7 +50,7 @@ export default function ResumePage() {
             alt="nyu icon"
             width={50}
             height={50}
-            className="mb-4"
+            className="mb-4 rounded-md"
           />
           <div className="flex justify-between gap-4">
             <HeadingSM className="mb-0">New York University</HeadingSM>
@@ -83,19 +83,19 @@ export default function ResumePage() {
           <HeadingMD>Experience</HeadingMD>
           <div className="flex flex-col gap-8">
             <JobCard
+              title="Product Intern"
+              imgClassName="w-full rounded-lg"
+              date="Feb. 2025 - Present"
+              name="Dynamo AI"
+              href="https://www.linkedin.com/company/dynamofl/posts/?feedView=all"
+              src="/resume/dynamo.jpeg"
+            />
+            <JobCard
               title="Front-End Engineer + UX/UI Design Intern"
-              date="Dec. 2024 - Present"
+              date="Dec. 2024 - Feb. 2025"
               name="IntBot"
               href="https://www.linkedin.com/company/intbot/posts/?feedView=all"
               src="/resume/intbot.svg"
-            />
-            <JobCard
-              title="UX/UI Design Intern"
-              imgClassName="w-full rounded-lg"
-              date="Dec. 2024 - Jan. 2025"
-              name="Quilly"
-              href="https://www.linkedin.com/company/quilly/posts/?feedView=all"
-              src="/resume/quilly.jpeg"
             />
             <JobCard
               title="UX/UI Engineer Intern"
@@ -104,14 +104,6 @@ export default function ResumePage() {
               name="GMB Fitness"
               href="https://www.linkedin.com/company/gold-medal-bodies/posts/?feedView=all"
               src="/resume/gmb.png"
-            />
-            <JobCard
-              title="Web Designer & Developer Intern"
-              imgClassName="w-full rounded-lg"
-              date="May. 2023 - Aug. 2023"
-              name="Consulfi"
-              href="https://www.linkedin.com/company/consulfi/posts/?feedView=all"
-              src="/resume/consulfi.jpg"
             />
             <JobCard
               title="Graphic Designer"

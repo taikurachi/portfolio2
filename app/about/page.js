@@ -44,16 +44,14 @@ export default function AboutPage() {
         </div>
         <div>
           <HeadingLG className="mb-4">Value</HeadingLG>
-          <p>
-            My combination of design and technical skills allows me to be
+          <p className="mb-4">
+            My combination of frontend & design technical skills allows me to be
             effective in a variety of roles and situations.
           </p>
           <ul className="ml-8 list-disc">
-            <li>I can lead your design of a new website, mobile page.</li>
-            <li>I can engineer a new prototype that I designed.</li>
-            <li>
-              I can also bridge that gap between design and development teams.
-            </li>
+            <li>I can engineer new products and features.</li>
+            <li>I can prototype new features before pushed to production.</li>
+            <li>I can bridge that gap between design and development teams.</li>
           </ul>
         </div>
         <div>
@@ -80,69 +78,6 @@ export default function AboutPage() {
                 width={600}
                 height={300}
                 alt="taisei wrestling"
-              />
-            </div>
-          </div>
-        </div>
-        <div>
-          <HeadingLG className="mb-4">
-            How I became Interested in Design
-          </HeadingLG>
-          <p>
-            I came across this Duke Commitment edit made by CBB Visuals. I was
-            inspired and wanted to make my own. I taught myself Photoshop and
-            created this graphic for my commitment to wrestle at NYU.
-          </p>
-          <p>
-            This graphic took me over 15 hours to make since I manually cut out
-            the image using the pen tool. I only realized later that I could
-            just press the select subject button to achieve the same result...
-          </p>
-          <div className="flex gap-4 sm:gap-10 mb-8">
-            <div>
-              <Image
-                src="/about/duke.webp"
-                height={500}
-                width={400}
-                alt="duke commitment graphic"
-              />
-            </div>
-            <div>
-              <Image
-                src="/about/taisei-commit.webp"
-                height={500}
-                width={400}
-                alt="taisei commit graphic"
-              />
-            </div>
-          </div>
-          <p>
-            Ever since then, I was asked by other athletes to make commitment
-            graphics for them.
-          </p>
-          <div className="flex gap-4 sm:gap-10 mb-8">
-            <div>
-              <Image
-                src="/about/nyu-commit.webp"
-                height={500}
-                width={400}
-                alt="nyu commit graphic"
-              />
-            </div>
-            <div>
-              <Image
-                src="/about/jwu-commit.webp"
-                height={500}
-                width={400}
-                alt="jwu commit graphic"
-              />
-            </div>
-            <div>
-              <Image
-                src="/about/rwu-commit.webp"
-                height={500}
-                width={400}
-                alt="rwu commit graphic"
               />
             </div>
           </div>

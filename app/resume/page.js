@@ -91,27 +91,19 @@ export default function ResumePage() {
               src="/resume/dynamo.jpeg"
             />
             <JobCard
-              title="Front-End Engineer + UX/UI Design Intern"
+              title="Frontend Engineer Intern"
               date="Dec. 2024 - Feb. 2025"
               name="IntBot"
               href="https://www.linkedin.com/company/intbot/posts/?feedView=all"
               src="/resume/intbot.svg"
             />
             <JobCard
-              title="UX/UI Engineer Intern"
+              title="Frontend Engineer Intern"
               imgClassName="w-full rounded-lg"
               date="May. 2023 - Dec. 2024"
               name="GMB Fitness"
               href="https://www.linkedin.com/company/gold-medal-bodies/posts/?feedView=all"
               src="/resume/gmb.png"
-            />
-            <JobCard
-              title="Graphic Designer"
-              imgClassName="w-full rounded-lg"
-              date="Oct. 2022 - Dec. 2024"
-              name="NYU Wrestling"
-              href="https://www.linkedin.com/school/new-york-university/posts/?feedView=all"
-              src="/resume/nyu.png"
             />
           </div>
         </div>

@@ -34,16 +34,6 @@ export default function ResumePage() {
           </div>
         </div>
         <div>
-          <HeadingMD>About</HeadingMD>
-          <p>
-            A proactive designer focused on crafting user-friendly,
-            high-performance, and accessible solutions. Experienced in HTML,
-            CSS, JavaScript, and React, I excel at bridging design and
-            development. Eager to grow, I actively seek learning opportunities
-            through mentorship and independent study.
-          </p>
-        </div>
-        <div>
           <HeadingMD>Education</HeadingMD>
           <Image
             src="/resume/nyu.png"
@@ -68,8 +58,8 @@ export default function ResumePage() {
             <span className="font-bold">GPA: </span>3.7
           </p>
           <p className="mb-2">
-            <span className="font-bold">Relevant Courses: </span>User Experience
-            Design, Data Structures & Algorithms, Object Oriented Programming,
+            <span className="font-bold">Relevant Courses: </span>Data Structures
+            & Algorithms, Object Oriented Programming, User Experience Design
             Dynamic Web Applications, Visual Foundation Studio, Ideation &
             Prototyping, Dark Patterns (UX/UI)
           </p>

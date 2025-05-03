@@ -25,6 +25,11 @@ export default function AboutPage() {
             problems creatively and efficiently. I also enjoy pressure and high
             stakes environments.
           </p>
+          <p>
+            Challenges excite me. I see them as learning opportunities, a chance
+            to expand my skillset and deepen my knowledge. I have a strong
+            desire to be skilled at things I devote my time and care to.
+          </p>
         </div>
         <div>
           <HeadingLG className="mb-4">Hobbies</HeadingLG>

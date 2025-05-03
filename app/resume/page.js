@@ -35,57 +35,66 @@ export default function ResumePage() {
         </div>
         <div>
           <HeadingMD>Education</HeadingMD>
-          <Image
-            src="/resume/nyu.png"
-            alt="nyu icon"
-            width={50}
-            height={50}
-            className="mb-4 rounded-md"
-          />
-          <div className="flex justify-between gap-4">
-            <HeadingSM className="mb-0">New York University</HeadingSM>
-            <p className="mb-0">New York, NY</p>
+          <div className="flex justify-between mb-2">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/resume/nyu.png"
+                alt="nyu icon"
+                width={50}
+                height={50}
+                className="rounded-md"
+              />
+              <div>
+                <h3 className="font-semibold text-lg sm:text-xl md:text-2xl">
+                  New York University
+                </h3>
+                <p className="mb-0">
+                  B.S. Integrated Design & Media, Minor in Computer Science
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="mb-0 text-right">New York, NY</p>
+              <p className="mb-0">Exp. May 2026</p>
+            </div>
           </div>
-          <div className="mb-2 flex justify-between gap-10">
-            <p className="mb-0">
-              B.S. Integrated Design & Media, Minors in Computer Science + Web
-              Development
-            </p>
-            <p className="min-w-fit">Exp. May 2026</p>
-          </div>
-
-          <p className="mb-2">
+          <p className="mb-0">
             <span className="font-bold">GPA: </span>3.7
           </p>
-          <p className="mb-2">
-            <span className="font-bold">Relevant Courses: </span>Data Structures
-            & Algorithms, Object Oriented Programming, User Experience Design
-            Dynamic Web Applications, Visual Foundation Studio, Ideation &
-            Prototyping, Dark Patterns (UX/UI)
-          </p>
-          <p className="mb-2">
-            <span className="font-bold">Varsity Wrestling: </span>4th place at
-            Northeast Regionals, set NYU single-season record with 32 wins at
-            125 lbs, ranked 12th nationally
+          <p className="mb-0">
+            <span className="font-bold">Relevant Courses: </span>
+            <span>
+              Data Structures & Algorithms, UX Design, Dynamic Web Applications,
+              Dark Patterns (UX/UI)
+            </span>
           </p>
         </div>
         <div>
           <HeadingMD>Experience</HeadingMD>
           <div className="flex flex-col gap-8">
             <JobCard
-              title="Product Intern"
+              title="Frontend Software Engineer Intern"
               imgClassName="w-full rounded-lg"
-              date="Feb. 2025 - Present"
+              date="May. 2025 - Present"
+              name="ByteDance"
+              href="https://www.linkedin.com/company/bytedance/posts/?feedView=all"
+              src="/resume/bytedance.jpg"
+            />
+            <JobCard
+              title="Frontend/Product"
+              imgClassName="w-full rounded-lg"
+              date="Feb. 2025 - Apr. 2025"
               name="Dynamo AI"
               href="https://www.linkedin.com/company/dynamofl/posts/?feedView=all"
               src="/resume/dynamo.jpeg"
             />
             <JobCard
               title="Frontend Engineer Intern"
+              imgClassName="w-full rounded-lg"
               date="Dec. 2024 - Feb. 2025"
               name="IntBot"
               href="https://www.linkedin.com/company/intbot/posts/?feedView=all"
-              src="/resume/intbot.svg"
+              src="/resume/intbot.jpeg"
             />
             <JobCard
               title="Frontend Engineer Intern"
@@ -100,20 +109,19 @@ export default function ResumePage() {
         <div>
           <HeadingMD>Skills</HeadingMD>
           <p className="mb-0">
-            <span className="font-bold">Design: </span>Figma, FigJam, Adobe
-            Photoshop
-          </p>
-          <p className="mb-0">
             <span className="font-bold">Languages: </span>TypeScript,
-            JavaScript, HTML, CSS, PHP
+            JavaScript, HTML, CSS, Python, PHP
           </p>
           <p className="mb-0">
-            <span className="font-bold">Frameworks: </span>ReactJS, NextJS,
-            TailwindCSS, SASS, SCSS
+            <span className="font-bold">Frameworks: </span>React, NextJS,
+            NodeJS, ExpressJS, TailwindCSS
           </p>
           <p className="mb-0">
-            <span className="font-bold">Others: </span>Git, Docker, Firebase,
-            Webpack, Jest
+            <span className="font-bold">Preprocessors: </span>SCSS, SASS, LESS
+          </p>
+          <p className="mb-0">
+            <span className="font-bold">Others: </span>Git, Docker, Jest,
+            Firebase, Webpack
           </p>
         </div>
       </div>

@@ -27,9 +27,9 @@ export default function JobCard({
       <div className="flex sm:flex-row flex-col items-start sm:items-center w-full">
         <div className="ml-0 md:ml-4 mb-2 md:mb-0 ">
           <h3 className="font-semibold text-lg sm:text-xl md:text-2xl">
-            {title}
+            {name}
           </h3>
-          <p className="mb-0">{name}</p>
+          <p className="mb-0">{title}</p>
         </div>
         <p className="ml-0 sm:ml-auto">{date}</p>
       </div>

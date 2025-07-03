@@ -12,7 +12,7 @@ export default function ResumePage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-20 flex flex-col gap-10 pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-20 flex flex-col gap-10 pb-40">
         <div>
           <HeadingMain className="mb-4">Taisei Kurachi</HeadingMain>
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-10">
@@ -35,13 +35,13 @@ export default function ResumePage() {
         </div>
         <div>
           <HeadingMD>Education</HeadingMD>
-          <div className="flex justify-between mb-2">
+          <div className="flex justify-between mb-4">
             <div className="flex items-center gap-4">
               <Image
                 src="/resume/nyu.png"
                 alt="nyu icon"
-                width={50}
-                height={50}
+                width={66}
+                height={66}
                 className="rounded-md"
               />
               <div>
@@ -49,7 +49,8 @@ export default function ResumePage() {
                   New York University
                 </h3>
                 <p className="mb-0">
-                  B.S. Integrated Design & Media, Minor in Computer Science
+                  B.S. Integrated Design & Media (HCI), Minor in Computer
+                  Science
                 </p>
               </div>
             </div>
@@ -59,7 +60,7 @@ export default function ResumePage() {
             </div>
           </div>
           <p className="mb-0">
-            <span className="font-bold">GPA: </span>3.7
+            <span className="font-bold">GPA: </span>3.7 / 4.0
           </p>
           <p className="mb-0">
             <span className="font-bold">Relevant Courses: </span>
@@ -76,12 +77,12 @@ export default function ResumePage() {
               title="Frontend Software Engineer Intern"
               imgClassName="w-full rounded-lg"
               date="May. 2025 - Present"
-              name="ByteDance"
+              name="TikTok"
               href="https://www.linkedin.com/company/bytedance/posts/?feedView=all"
               src="/resume/bytedance.jpg"
             />
             <JobCard
-              title="Frontend/Product"
+              title="Frontend/Product, Contract"
               imgClassName="w-full rounded-lg"
               date="Feb. 2025 - Apr. 2025"
               name="Dynamo AI"

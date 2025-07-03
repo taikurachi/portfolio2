@@ -42,9 +42,7 @@
     --foreground: #ededed;
   }
 } */
-* {
-  cursor: none;
-}
+
 body {
   font-family: "Outfit", "sans-serif";
   background-color: var(--background-color);
@@ -61,25 +59,6 @@ body.menu-open {
 }
 p {
   margin-bottom: 2rem;
-  font-size: 1.25rem;
-}
-
-ul,
-ol,
-a {
-  font-size: 1.25rem;
-}
-
-@media screen and (max-width: 767px) {
-  p {
-    font-size: 1rem;
-  }
-
-  ul,
-  ol,
-  a {
-    font-size: 1rem;
-  }
 }
 
 @media screen and (max-width: 640px) {

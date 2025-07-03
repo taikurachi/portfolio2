@@ -1,30 +1,11 @@
-"use client";
-import { useCursor } from "../cursorContext/CursorContext";
-import { useEffect, useRef } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 export default function Footer() {
-  const { setCursorProperties, cursorProperties } = useCursor();
-  const initialColor = useRef(cursorProperties?.color);
-
-  useEffect(() => {
-    if (cursorProperties?.color !== "bg-black") {
-      initialColor.current = cursorProperties.color;
-    }
-  }, [cursorProperties?.color]);
-
-  const cardEnter = () => setCursorProperties({ color: "bg-black" });
-  const cardLeave = () => setCursorProperties({ color: initialColor.current });
-
   return (
-    <footer
-      onMouseEnter={cardEnter}
-      onMouseLeave={cardLeave}
-      className="bg-primary-beige text-black"
-    >
-      <div className="pr-10 pl-10 pb-8 pt-8 flex flex-col md:flex-row items-start md:items-end gap-10 sm:gap-20 max-w-[1120px] mx-auto ">
+    <footer className="bg-primary-beige text-black">
+      <div className="pr-10 pl-10 pb-8 pt-8 flex flex-col md:flex-row items-start md:items-end gap-10 sm:gap-20 mx-auto w-[1440px]">
         <div>
-          <Logo width={80} color="black" />
+          <Logo width={60} color="black" />
           <p className="mt-4 mb-0">Designed & built by Taisei Kurachi</p>
         </div>
         <div>

@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1120px] mt-20 flex flex-col gap-20 pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-20 flex flex-col gap-20 pb-40">
         <div>
           <HeadingMain className="mb-4">About Me</HeadingMain>
           <p className="text-lg opacity-80">A bit about me and my life.</p>
@@ -16,7 +16,7 @@ export default function AboutPage() {
             width={0}
             height={0}
             sizes="100vw"
-            style={{ width: "80%", height: "auto" }}
+            style={{ width: "60%", height: "auto" }}
             alt="taisei profile image"
             className="rounded-xl mb-10"
           />

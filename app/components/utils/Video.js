@@ -1,10 +1,15 @@
-export default function Video({ altText, src, className, videoClassName }) {
+export default function Video({
+  altText = null,
+  src,
+  className,
+  videoClassName,
+}) {
   return (
     <div className={`${className} rounded-lg bg-transparent`}>
       <video
         muted
         preload="auto"
-        className={videoClassName}
+        className={`${videoClassName} rounded-lg`}
         autoPlay
         loop
         playsInline

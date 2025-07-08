@@ -37,13 +37,15 @@ export default function ResumePage() {
           <HeadingMD>Education</HeadingMD>
           <div className="flex justify-between mb-4">
             <div className="flex items-center gap-4">
-              <Image
-                src="/resume/nyu.png"
-                alt="nyu icon"
-                width={66}
-                height={66}
-                className="rounded-md"
-              />
+              <div className="w-12 sm:w-16">
+                <Image
+                  src="/resume/nyu.png"
+                  alt="nyu icon"
+                  width={20}
+                  height={20}
+                  className="rounded-md w-full"
+                />
+              </div>
               <div>
                 <h3 className="font-semibold text-lg sm:text-xl md:text-2xl">
                   New York University
@@ -54,12 +56,14 @@ export default function ResumePage() {
                 </p>
               </div>
             </div>
-            <div>
-              <p className="mb-0 text-right">New York, NY</p>
-              <p className="mb-0">Exp. May 2026</p>
+            <div className="hidden md:block">
+              <p className="mb-0">Grad: May 2026</p>
             </div>
           </div>
-          <p className="mb-0">
+          <p className="mb-0 md:hidden block">
+            <span className="font-bold">Grad:</span> May 2026
+          </p>
+          <p className="mb-0 ">
             <span className="font-bold">GPA: </span>3.7 / 4.0
           </p>
           <p className="mb-0">
@@ -75,7 +79,6 @@ export default function ResumePage() {
           <div className="flex flex-col gap-8">
             <JobCard
               title="Frontend Software Engineer Intern"
-              imgClassName="w-full rounded-lg"
               date="May. 2025 - Present"
               name="TikTok"
               href="https://www.linkedin.com/company/bytedance/posts/?feedView=all"
@@ -83,7 +86,6 @@ export default function ResumePage() {
             />
             <JobCard
               title="Frontend/Product, Contract"
-              imgClassName="w-full rounded-lg"
               date="Feb. 2025 - Apr. 2025"
               name="Dynamo AI"
               href="https://www.linkedin.com/company/dynamofl/posts/?feedView=all"
@@ -91,7 +93,6 @@ export default function ResumePage() {
             />
             <JobCard
               title="Frontend Engineer Intern"
-              imgClassName="w-full rounded-lg"
               date="Dec. 2024 - Feb. 2025"
               name="IntBot"
               href="https://www.linkedin.com/company/intbot/posts/?feedView=all"
@@ -99,7 +100,6 @@ export default function ResumePage() {
             />
             <JobCard
               title="Frontend Engineer Intern"
-              imgClassName="w-full rounded-lg"
               date="May. 2023 - Dec. 2024"
               name="GMB Fitness"
               href="https://www.linkedin.com/company/gold-medal-bodies/posts/?feedView=all"

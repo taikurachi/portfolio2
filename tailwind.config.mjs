@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +10,8 @@ export default {
       colors: {
         primary: {
           black: "#1f1f1f",
+          gray: "#2E2E2E",
+          lightGray: "#494949",
           purple: "#8E86FF",
           lightPurple: "#C4C0FF",
           blue: "#C2EAF3",
@@ -26,3 +28,5 @@ export default {
   },
   plugins: [],
 };
+
+export default config;

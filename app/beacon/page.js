@@ -8,14 +8,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Video from "../components/utils/Video";
 import AccentText from "../components/utils/AccentText";
-import WorkCard from "../components/work/WorkCard";
-import BackButton from "../components/utils/BackButton";
+import PageWithStickyBackButton from "../components/utils/PageWithStickyBackButton";
 
 export default function BeaconPage() {
   return (
-    <>
-      <Header />
-      <BackButton />
+    <PageWithStickyBackButton>
       <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-10 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>Cancer Support App Focused on Positivity.</HeadingMain>
@@ -1558,6 +1555,6 @@ export default function BeaconPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </PageWithStickyBackButton>
   );
 }

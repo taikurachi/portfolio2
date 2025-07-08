@@ -34,14 +34,20 @@
   .font-mundial {
     font-family: "Mundial", sans-serif;
   }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+html {
+  overflow-x: hidden;
+}
 
 body {
   font-family: "Outfit", "sans-serif";
@@ -49,14 +55,6 @@ body {
   color: var(--text-color);
 }
 
-body.menu-open {
-  overflow: hidden;
-}
-@media (min-width: 640px) {
-  body.menu-open {
-    overflow: auto;
-  }
-}
 p {
   margin-bottom: 2rem;
 }
@@ -64,5 +62,12 @@ p {
 @media screen and (max-width: 640px) {
   p {
     margin-bottom: 1.25rem;
+    font-size: 0.8rem;
+  }
+  span {
+    font-size: 0.7rem;
+  }
+  a {
+    font-size: 0.8rem;
   }
 }

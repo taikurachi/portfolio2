@@ -12,12 +12,10 @@ export default function JobCard({
     <div className="flex md:flex-row flex-col items-start md:items-center w-full">
       <Link
         href={href}
-        className={`w-[70px] rounded-lg ${
-          imgClassName ? "p-2" : ""
-        }p-2 bg-white flex justify-center mb-2 sm:mb-0`}
+        className={`w-12 sm:w-16 flex justify-center mb-2 sm:mb-0`}
       >
         <Image
-          className={imgClassName ? imgClassName : ""}
+          className={`w-full rounded-md ${imgClassName ? imgClassName : ""}`}
           src={src}
           alt={`${name} icon`}
           width={20}

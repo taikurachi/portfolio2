@@ -16,6 +16,10 @@ export const metadata = {
   manifest: "/favicon/site.webmanifest",
   description:
     "Designer and developer focused on solving problems effectively and aesthetically.",
+  other: {
+    "theme-color": "#1f1f1f",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+  },
 };
 
 export default function RootLayout({ children }) {

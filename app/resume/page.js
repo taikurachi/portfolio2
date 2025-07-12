@@ -1,18 +1,16 @@
 "use client";
 import Footer from "../components/utils/Footer";
-import Header from "../components/utils/Header";
 import HeadingMain from "../components/utils/headings/HeadingMain";
 import HeadingMD from "../components/utils/headings/HeadingMD";
 import Image from "next/image";
-import HeadingSM from "../components/utils/headings/HeadingSM";
 import Link from "next/link";
 import JobCard from "../components/utils/JobCard";
+import PageWithStickyBackButton from "../components/utils/PageWithStickyBackButton";
 
 export default function ResumePage() {
   return (
-    <>
-      <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-20 flex flex-col gap-10 pb-40">
+    <PageWithStickyBackButton>
+      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-6 flex flex-col gap-10 pb-40">
         <div>
           <HeadingMain className="mb-4">Taisei Kurachi</HeadingMain>
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-10">
@@ -39,7 +37,7 @@ export default function ResumePage() {
             <div className="flex items-center gap-4">
               <div className="w-12 sm:w-16">
                 <Image
-                  src="/resume/nyu.png"
+                  src="/resume/nyu.svg"
                   alt="nyu icon"
                   width={20}
                   height={20}
@@ -81,29 +79,36 @@ export default function ResumePage() {
               title="Frontend Software Engineer Intern"
               date="May. 2025 - Present"
               name="TikTok"
+              href="https://www.linkedin.com/company/tiktok/posts/?feedView=all"
+              src="/resume/tiktok.svg"
+            />
+            <JobCard
+              title="Frontend Software Engineer Intern"
+              date="May. 2025 - Present"
+              name="ByteDance"
               href="https://www.linkedin.com/company/bytedance/posts/?feedView=all"
-              src="/resume/bytedance.jpg"
+              src="/resume/bytedance.svg"
             />
             <JobCard
               title="Frontend/Product, Contract"
               date="Feb. 2025 - Apr. 2025"
               name="Dynamo AI"
               href="https://www.linkedin.com/company/dynamofl/posts/?feedView=all"
-              src="/resume/dynamo.jpeg"
+              src="/resume/dynamo.svg"
             />
             <JobCard
               title="Frontend Engineer Intern"
               date="Dec. 2024 - Feb. 2025"
               name="IntBot"
               href="https://www.linkedin.com/company/intbot/posts/?feedView=all"
-              src="/resume/intbot.jpeg"
+              src="/resume/intbot.svg"
             />
             <JobCard
               title="Frontend Engineer Intern"
               date="May. 2023 - Dec. 2024"
               name="GMB Fitness"
               href="https://www.linkedin.com/company/gold-medal-bodies/posts/?feedView=all"
-              src="/resume/gmb.png"
+              src="/resume/gmb.svg"
             />
           </div>
         </div>
@@ -127,6 +132,6 @@ export default function ResumePage() {
         </div>
       </div>
       <Footer />
-    </>
+    </PageWithStickyBackButton>
   );
 }

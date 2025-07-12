@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 export default function Header({ showBackButton = false }) {
   return (
-    <header className={`sticky top-0 bg-primary-black z-10`}>
+    <header className={`fixed top-0 left-0 right-0 bg-primary-black z-10`}>
       <div className="px-10 pt-6 mx-auto max-w-[1440px]">
         <nav className="flex justify-between items-center pb-6 border-primary-darkBeige relative">
           <div className="flex items-center gap-4">
@@ -30,7 +30,7 @@ export default function Header({ showBackButton = false }) {
                       alt="arrow icon"
                       className="opacity-60 group-hover:opacity-100"
                     />
-                    <span className="text-sm font-semibold">Back</span>
+                    <span className="text-sm sm:font-semibold">Back</span>
                   </Link>
                 </motion.div>
               )}

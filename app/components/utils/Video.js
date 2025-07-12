@@ -5,11 +5,11 @@ export default function Video({
   videoClassName,
 }) {
   return (
-    <div className={`${className} rounded-lg bg-transparent`}>
+    <div className={`${className} bg-transparent`}>
       <video
         muted
         preload="auto"
-        className={`${videoClassName} rounded-lg`}
+        className={`${videoClassName}`}
         autoPlay
         loop
         playsInline

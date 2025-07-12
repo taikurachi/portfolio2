@@ -13,15 +13,16 @@ import PageWithStickyBackButton from "../components/utils/PageWithStickyBackButt
 export default function BeaconPage() {
   return (
     <PageWithStickyBackButton>
-      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-10 flex flex-col gap-20 pb-20 sm:pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-6 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>Cancer Support App Focused on Positivity.</HeadingMain>
           <p className="mb-0">
             A passion project inspired by a close friend diagnosed with Stage 3
             Oligodendroglioma.
           </p>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 w-full sm:w-2/3">
             <Video
+              className="rounded-[10%]"
               videoClassName="rounded-[10%]"
               src="/beacon/beacon-onboarding.webm"
               altText="beacon onboarding video"
@@ -222,8 +223,8 @@ export default function BeaconPage() {
           </p>
           <div className="flex md:flex-row flex-col-reverse gap-10 mt-20 items-center">
             <Video
-              className="md:w-1/2 lg:w-1/4"
-              videoClassName="rounded-[30px]"
+              className="w-1/2 lg:w-1/4 rounded-[10%]"
+              videoClassName="rounded-[10%]"
               src="/beacon/beacon-onboarding.webm"
               altText="beacon onboarding demo"
             />
@@ -243,8 +244,8 @@ export default function BeaconPage() {
           </div>
           <div className="flex md:flex-row flex-col-reverse gap-10 mt-20 items-center">
             <Video
-              className="md:w-1/2 lg:w-1/4"
-              videoClassName="rounded-[30px]"
+              className="w-1/2 lg:w-1/4 rounded-[10%]"
+              videoClassName="rounded-[10%]"
               src="/beacon/beacon-second.webm"
               altText="beacon onboarding demo"
             />
@@ -264,8 +265,8 @@ export default function BeaconPage() {
           </div>
           <div className="flex md:flex-row flex-col-reverse gap-10 mt-20 items-center">
             <Video
-              className="md:w-1/2 lg:w-1/4"
-              videoClassName="rounded-[30px]"
+              className="w-1/2 lg:w-1/4 rounded-[10%]"
+              videoClassName="rounded-[10%]"
               src="/beacon/beacon-home.webm"
               altText="beacon onboarding demo"
             />
@@ -963,94 +964,46 @@ export default function BeaconPage() {
                 basic interactive prototype using Figma to test my hypothesis.
               </p>
               <HeadingSM>Onboarding</HeadingSM>
-              <div className="flex gap-8 mb-8">
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-1.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 1"
-                  />
-                </div>
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-2.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 2"
-                  />
-                </div>
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-3.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 3"
-                  />
-                </div>
+              <div className="flex gap-8 mb-8 w-full sm:w-2/3">
+                {[1, 2, 3].map((num) => (
+                  <div key={num} className="w-2/3">
+                    <Image
+                      className="w-full"
+                      src={`/beacon/hifi-${num}.svg`}
+                      width={300}
+                      height={500}
+                      alt={`hifi image ${num}`}
+                    />
+                  </div>
+                ))}
               </div>
               <HeadingSM>Main Flow</HeadingSM>
-              <div className="flex gap-8 mb-8">
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-4.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 4"
-                  />
-                </div>
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-5.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 5"
-                  />
-                </div>
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-6.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 6"
-                  />
-                </div>
+              <div className="flex gap-8 mb-8 w-full sm:w-2/3">
+                {[4, 5, 6].map((num) => (
+                  <div key={num} className="w-2/3">
+                    <Image
+                      className="w-full"
+                      src={`/beacon/hifi-${num}.svg`}
+                      width={300}
+                      height={500}
+                      alt={`hifi image ${num}`}
+                    />
+                  </div>
+                ))}
               </div>
 
-              <div className="flex gap-8">
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-7.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 7"
-                  />
-                </div>
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-8.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 8"
-                  />
-                </div>
-                <div>
-                  <Image
-                    className="w-full"
-                    src="/beacon/hifi-9.svg"
-                    width={300}
-                    height={500}
-                    alt="hifi image 9"
-                  />
-                </div>
+              <div className="flex gap-8 w-full sm:w-2/3">
+                {[7, 8, 9].map((num) => (
+                  <div key={num} className="w-2/3">
+                    <Image
+                      className="w-full"
+                      src={`/beacon/hifi-${num}.svg`}
+                      width={300}
+                      height={500}
+                      alt={`hifi image ${num}`}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -1060,12 +1013,14 @@ export default function BeaconPage() {
           <div className="flex flex-col gap-20">
             <div>
               <HeadingMD>User Testing</HeadingMD>
-              <p>
+              <p className="mb-2">
                 I moderated user testing with 5 users with varying backgrounds.
                 One was my friend, current cancer patient. The rest included
                 people who were interested in learning more about cancer.
               </p>
-              <p>Here&apos;s a brief overview of the process:</p>
+              <p className="mb-2">
+                Here&apos;s a brief overview of the process:
+              </p>
               <ul className="ml-8 list-disc mb-8">
                 <li>Introduce the project goal, and put users at ease.</li>
                 <li>
@@ -1147,34 +1102,16 @@ export default function BeaconPage() {
                     of the questionnaire.
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
-                    <Image
-                      className="w-full"
-                      src="/beacon/results-1.webp"
-                      width={300}
-                      height={200}
-                      alt="results image"
-                    />
-                    <Image
-                      className="w-full"
-                      src="/beacon/results-2.webp"
-                      width={300}
-                      height={200}
-                      alt="results image"
-                    />
-                    <Image
-                      className="w-full"
-                      src="/beacon/results-3.webp"
-                      width={300}
-                      height={200}
-                      alt="results image"
-                    />{" "}
-                    <Image
-                      className="w-full"
-                      src="/beacon/results-4.webp"
-                      width={300}
-                      height={200}
-                      alt="results image"
-                    />
+                    {[1, 2, 3, 4].map((num) => (
+                      <Image
+                        key={num}
+                        className="w-full"
+                        src={`/beacon/results-${num}.webp`}
+                        width={300}
+                        height={200}
+                        alt="results image"
+                      />
+                    ))}
                   </div>
                   <p className="mb-0">
                     Most importantly,{" "}
@@ -1236,61 +1173,48 @@ export default function BeaconPage() {
                       changes I implemented below to address the issues.
                     </p>
                     <div className="flex flex-col gap-10 mt-10 mb-8">
-                      <div className="flex sm:flex-row flex-col gap-10 items-start sm:items-center">
-                        <Image
-                          className="h-fit invert"
-                          src="/beacon/progressive-icon.webp"
-                          width={100}
-                          height={80}
-                          alt="progressive discolure icon"
-                        />
-                        <div>
-                          <HeadingSM>Progressive Disclosure</HeadingSM>
-                          <p>
-                            Using an UX technique called progressive disclosure,
-                            I decreased the cognitive load for users through the
-                            separation of each question.
-                          </p>
+                      {[
+                        {
+                          "icon-name": "progressive-icon",
+                          title: "Progressive Disclosure",
+                          description:
+                            "Using an UX technique called progressive disclosure, decreased the cognitive load for users through the separation of each question.",
+                        },
+                        {
+                          "icon-name": "progress-icon",
+                          title: "Visual Progress Bar",
+                          description:
+                            "I added progress dots in the bottom to indicate how far along the user was in the onboarding process. Having a progress visual will motivate users to continue to finish their onboarding and reassure them of any uncertainties.",
+                        },
+                        {
+                          "icon-name": "friendly-icon",
+                          title: "Friendly Language",
+                          description:
+                            " I added friendly language in the first screen to make the onboarding process feel less invasive, tedious, or negative. I wanted users to feel safe and supported when they first download the app.",
+                        },
+                      ].map((item, index) => (
+                        <div key={index}>
+                          <div className="flex items-center gap-6 mb-3 bg-primary-gray w-fit px-4 py-2 rounded-md">
+                            <div className="w-[30px] sm:w-[40px]">
+                              <Image
+                                className="h-fit invert"
+                                src={`/beacon/${item["icon-name"]}${
+                                  item["icon-name"] === "friendly-icon"
+                                    ? ".svg"
+                                    : ".webp"
+                                }`}
+                                width={50}
+                                height={50}
+                                alt={`${item.title} icon`}
+                              />
+                            </div>
+                            <p className="mb-0 text-lg sm:text-2xl font-semibold">
+                              {item.title}
+                            </p>
+                          </div>
+                          <p>{item.description}</p>
                         </div>
-                      </div>
-                      <div className="flex sm:flex-row flex-col gap-10 items-start sm:items-center">
-                        <Image
-                          className="invert h-fit"
-                          src="/beacon/progress-icon.webp"
-                          width={100}
-                          height={80}
-                          alt="progress icon"
-                        />
-                        <div>
-                          <HeadingSM>Visual Progess Bar</HeadingSM>
-                          <p>
-                            I added progress dots in the bottom to indicate how
-                            far along the user was in the onboarding process.
-                            Having a progress visual will motivate users to
-                            continue to finish their onboarding and reassure
-                            them of any uncertainties.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex sm:flex-row flex-col gap-10 items-start sm:items-center">
-                        <Image
-                          className="invert h-[100px]"
-                          src="/beacon/friendly-icon.svg"
-                          width={100}
-                          height={80}
-                          alt="friendly icon"
-                        />
-
-                        <div>
-                          <HeadingSM>Friendly Langauge</HeadingSM>
-                          <p>
-                            I added friendly language in the first screen to
-                            make the onboarding process feel less invasive,
-                            tedious, or negative. I wanted users to feel safe
-                            and supported when they first download the app.
-                          </p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                     <HeadingSM>Before</HeadingSM>
                     <Image
@@ -1302,38 +1226,16 @@ export default function BeaconPage() {
                     />
                     <HeadingSM>After</HeadingSM>
                     <div className="flex flex-col sm:flex-row gap-10 mb-8">
-                      <div>
-                        <Image
-                          src="/beacon/initial-1.svg"
-                          width={300}
-                          height={100}
-                          alt="onboarding redesign"
-                        />
-                      </div>
-                      <div>
-                        <Image
-                          src="/beacon/initial-2.svg"
-                          width={300}
-                          height={100}
-                          alt="onboarding redesign"
-                        />
-                      </div>
-                      <div>
-                        <Image
-                          src="/beacon/initial-3.svg"
-                          width={300}
-                          height={100}
-                          alt="onboarding redesign"
-                        />
-                      </div>
-                      <div>
-                        <Image
-                          src="/beacon/initial-4.svg"
-                          width={300}
-                          height={100}
-                          alt="onboarding redesign"
-                        />
-                      </div>
+                      {[1, 2, 3, 4].map((num) => (
+                        <div key={num}>
+                          <Image
+                            src={`/beacon/initial-${num}.svg`}
+                            width={300}
+                            height={100}
+                            alt="onboarding redesign"
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <div>
@@ -1344,30 +1246,31 @@ export default function BeaconPage() {
                       manually navigate to the diagnosis by narrowing down
                       possible options.
                     </p>
-                    <div className="flex sm:flex-row flex-col gap-10">
-                      <Image
-                        className="invert"
-                        src="/beacon/usability-icon.svg"
-                        width={100}
-                        height={100}
-                        alt="usability icon"
-                      />
-                      <div>
-                        <HeadingSM>Increasing Usability</HeadingSM>
-                        <p>
-                          Adding a manual lookup option enhances the app&apos;s
-                          usability by simplifying the process of finding a
-                          diagnosis. This feature is especially helpful for
-                          users who may not know their exact diagnosis or
-                          struggle to remember the spelling of complex medical
-                          terms.
+                    <div className="">
+                      <div className="flex gap-4 items-center py-2 px-4 rounded-md bg-primary-gray w-fit mb-4">
+                        <Image
+                          className="invert"
+                          src="/beacon/usability-icon.svg"
+                          width={30}
+                          height={30}
+                          alt="usability icon"
+                        />
+                        <p className="mb-0 font-semibold">
+                          Increasing Usability
                         </p>
                       </div>
+                      <p>
+                        Adding a manual lookup option enhances the app&apos;s
+                        usability by simplifying the process of finding a
+                        diagnosis. This feature is especially helpful for users
+                        who may not know their exact diagnosis or struggle to
+                        remember the spelling of complex medical terms.
+                      </p>
                     </div>
                     <div className="flex md:flex-row flex-col gap-4 md:gap-10 mb-8">
                       <div>
                         <HeadingSM>Before</HeadingSM>
-                        <div>
+                        <div className="w-2/3 sm:w-full">
                           <Image
                             className=""
                             src="/beacon/hifi-3.svg"
@@ -1380,30 +1283,16 @@ export default function BeaconPage() {
                       <div>
                         <HeadingSM>After</HeadingSM>
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10">
-                          <div>
-                            <Image
-                              src="/beacon/lookup-1.svg"
-                              width={340}
-                              height={100}
-                              alt="hifi prototype"
-                            />
-                          </div>
-                          <div>
-                            <Image
-                              src="/beacon/lookup-2.svg"
-                              width={340}
-                              height={100}
-                              alt="hifi prototype"
-                            />
-                          </div>
-                          <div>
-                            <Image
-                              src="/beacon/lookup-3.svg"
-                              width={340}
-                              height={100}
-                              alt="hifi prototype"
-                            />
-                          </div>
+                          {[1, 2, 3].map((num) => (
+                            <div key={num} className="w-2/3 sm:w-full">
+                              <Image
+                                src={`/beacon/lookup-${num}.svg`}
+                                width={340}
+                                height={100}
+                                alt="hifi prototype"
+                              />
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -1416,26 +1305,24 @@ export default function BeaconPage() {
                       Users noted that not everyone may be familiar with icon
                       meanings, which can increase confusion in the app.
                     </p>
-                    <div className="flex sm:flex-row flex-col gap-10">
+                    <div className="flex gap-4 items-center py-2 px-4 rounded-md bg-primary-gray w-fit mb-4">
                       <Image
                         className="invert"
                         src="/beacon/universal-icon.svg"
-                        width={100}
-                        height={100}
-                        alt="usability icon"
+                        width={20}
+                        height={30}
+                        alt="universal icon"
                       />
-                      <div>
-                        <HeadingSM>Universal Design</HeadingSM>
-                        <p>
-                          Adding descriptions ensures that people of all
-                          backgrounds, including varying ages, abilities, and
-                          needs, can navigate the app with clarity and ease.
-                          Universal design is especially critical for medical
-                          apps, as it promotes accessibility and inclusivity for
-                          all users.
-                        </p>
-                      </div>
+                      <p className="mb-0 font-semibold">Increasing Usability</p>
                     </div>
+                    <p>
+                      Adding descriptions ensures that people of all
+                      backgrounds, including varying ages, abilities, and needs,
+                      can navigate the app with clarity and ease. Universal
+                      design is especially critical for medical apps, as it
+                      promotes accessibility and inclusivity for all users.
+                    </p>
+
                     <div className="flex gap-10">
                       <div>
                         <HeadingSM>Before</HeadingSM>

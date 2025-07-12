@@ -1,13 +1,12 @@
-import Header from "../components/utils/Header";
 import HeadingMain from "../components/utils/headings/HeadingMain";
 import HeadingLG from "../components/utils/headings/HeadingLG";
 import Image from "next/image";
 import Footer from "../components/utils/Footer";
+import PageWithStickyBackButton from "../components/utils/PageWithStickyBackButton";
 export default function AboutPage() {
   return (
-    <>
-      <Header />
-      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-20 flex flex-col gap-20 pb-40">
+    <PageWithStickyBackButton>
+      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-6 flex flex-col gap-20 pb-40">
         <div>
           <HeadingMain className="mb-4">About Me</HeadingMain>
           <p className="text-lg opacity-80">A bit about me and my life.</p>
@@ -62,6 +61,6 @@ export default function AboutPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </PageWithStickyBackButton>
   );
 }

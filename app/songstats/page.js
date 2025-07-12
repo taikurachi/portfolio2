@@ -14,21 +14,23 @@ import CodeBlock from "../components/utils/CodeBlock";
 export default function SongStatsPage() {
   return (
     <PageWithStickyBackButton>
-      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-10 flex flex-col gap-20 pb-20 sm:pb-40">
+      <div className="mx-auto pr-10 pl-10 max-w-[1440px] mt-6 flex flex-col gap-20 pb-20 sm:pb-40">
         <div className="flex flex-col gap-10">
           <HeadingMain>Song Details Analysis</HeadingMain>
           <p className="mb-0">
             Music analytics dashboard providing lyrics analysis, song data
             visualization, and video discovery using Spotify design system.
           </p>
-          <div className="flex gap-4">
+          <div className="sm:flex-row flex-col flex gap-4">
             <Video
-              className="flex-1"
+              className="flex-1 rounded-lg"
+              videoClassName="rounded-lg"
               src="/songstats/songstats-preview.webm"
               altText={"songstats video preview"}
             />
             <Video
-              className="flex-1"
+              className="flex-1 rounded-lg"
+              videoClassName="rounded-lg"
               src="/songstats/songstats-lyrics.webm"
               altText={"songstats lyrics analysis"}
             />
@@ -89,7 +91,7 @@ export default function SongStatsPage() {
         </div>
         <div>
           <HeadingLG>Features</HeadingLG>
-          <div className="grid grid-cols-2 gap-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-20">
             {[
               {
                 heading: "Song Details Analysis",
@@ -212,7 +214,11 @@ export default function SongStatsPage() {
                 <HeadingMD>{heading}</HeadingMD>
                 <div className="flex-col flex gap-4">
                   <div className="flex-1">
-                    <Video src={`/songstats/songstats-${feature}.webm`} />
+                    <Video
+                      src={`/songstats/songstats-${feature}.webm`}
+                      className="rounded-lg"
+                      videoClassName="rounded-lg"
+                    />
                   </div>
                   <div className="flex-1">{description}</div>
                 </div>
@@ -397,11 +403,16 @@ const getColorPalette = async (imageUrl) => {
           <div>
             <div className="mb-14">
               <HeadingSM>
-                Problem: Search element losing focus across page rerenders
+                <span className="text-2xl sm:text-3xl font-semibold decoration-red-700 underline">
+                  Problem:
+                </span>{" "}
+                Search element losing focus across page rerenders
               </HeadingSM>
               <HeadingSM>
-                Solution: Use NextJS route groups and have a unified layout.tsx
-                file
+                <span className="text-2xl sm:text-3xl font-semibold decoration-green-700 underline">
+                  Solution:
+                </span>{" "}
+                Use NextJS route groups and have a unified layout.tsx file
               </HeadingSM>
               <p>
                 There was an issue where the search input would lose focus every
@@ -412,11 +423,16 @@ const getColorPalette = async (imageUrl) => {
             </div>
             <div className="mb-14">
               <HeadingSM>
-                Problem: Python runtime not available alongside Node for Vercel
-                hosting
+                <span className="text-2xl sm:text-3xl font-semibold decoration-red-700 underline">
+                  Problem:
+                </span>{" "}
+                Python runtime not available alongside Node for Vercel hosting
               </HeadingSM>
               <HeadingSM>
-                Solution: Host Python scrapers as AWS Lambda functions
+                <span className="text-2xl sm:text-3xl font-semibold decoration-green-700 underline">
+                  Solution:
+                </span>{" "}
+                Host Python scrapers as AWS Lambda functions
               </HeadingSM>
               <p>
                 Vercel&apos;s serverless functions don&apos;t support mixed
@@ -428,10 +444,16 @@ const getColorPalette = async (imageUrl) => {
             </div>
             <div className="mb-14">
               <HeadingSM>
-                Problem: API rate limiting causing failed requests
+                <span className="text-2xl sm:text-3xl font-semibold decoration-red-700 underline">
+                  Problem:
+                </span>{" "}
+                API rate limiting causing failed requests
               </HeadingSM>
               <HeadingSM>
-                Solution: Implement exponential backoff and request queuing
+                <span className="text-2xl sm:text-3xl font-semibold decoration-green-700 underline">
+                  Solution:
+                </span>{" "}
+                Implement exponential backoff and request queuing
               </HeadingSM>
               <p>
                 Multiple APIs (MusixMatch, Perplexity, Invidious) had different
